@@ -1,0 +1,10 @@
+[31-Mar-2021 14:00:31 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant 'CRYPTO_AEAD_XCHACHA20POLY1305_IETF_KEYBYTES' in /home/aanpdrqr/public_html/vendor/paragonie/sodium_compat/lib/constants.php:24
+Stack trace:
+#0 /home/aanpdrqr/public_html/vendor/paragonie/sodium_compat/lib/sodium_compat.php(825): require_once()
+#1 /home/aanpdrqr/public_html/vendor/paragonie/sodium_compat/autoload.php(51): require_once('/home/aanpdrqr/...')
+#2 /home/aanpdrqr/public_html/vendor/composer/autoload_real.php(71): require('/home/aanpdrqr/...')
+#3 /home/aanpdrqr/public_html/vendor/composer/autoload_real.php(61): composerRequirea476c669ab1dc8faf91ad52f531a4ab5('3109cb1a231dcd0...', '/home/aanpdrqr/...')
+#4 /home/aanpdrqr/public_html/vendor/autoload.php(7): ComposerAutoloaderInita476c669ab1dc8faf91ad52f531a4ab5::getLoader()
+#5 /home/aanpdrqr/public_html/public/index.php(34): require('/home/aanpdrqr/...')
+#6 {main}
+  thrown in /home/aanpdrqr/public_html/vendor/paragonie/sodium_compat/lib/constants.php on line 24

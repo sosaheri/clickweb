@@ -1,0 +1,6520 @@
+[2021-03-14 16:45:09] local.WARNING: array (
+  0 => 
+  array (
+    'id' => 615,
+    'created_at' => '2021-03-11T12:13:19.000000Z',
+    'updated_at' => '2021-03-11T12:17:03.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '1',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 832,
+        'created_at' => '2021-03-11T12:13:19.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 834,
+        'created_at' => '2021-03-11T12:13:58.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 835,
+        'created_at' => '2021-03-11T12:16:15.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:13:58.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:16:15.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'id' => 614,
+    'created_at' => '2021-03-11T12:05:39.000000Z',
+    'updated_at' => '2021-03-11T12:11:52.000000Z',
+    'address_id' => 15,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 828,
+        'created_at' => '2021-03-11T12:05:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 830,
+        'created_at' => '2021-03-11T12:11:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 831,
+        'created_at' => '2021-03-11T12:11:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  2 => 
+  array (
+    'id' => 613,
+    'created_at' => '2021-03-10T23:09:16.000000Z',
+    'updated_at' => '2021-03-10T23:10:59.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 823,
+        'created_at' => '2021-03-10T23:09:16.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 825,
+        'created_at' => '2021-03-10T23:09:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 826,
+        'created_at' => '2021-03-10T23:10:06.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 827,
+        'created_at' => '2021-03-10T23:10:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:09:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:06.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  3 => 
+  array (
+    'id' => 612,
+    'created_at' => '2021-03-10T21:06:11.000000Z',
+    'updated_at' => '2021-03-10T22:57:18.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 818,
+        'created_at' => '2021-03-10T21:06:11.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 820,
+        'created_at' => '2021-03-10T21:06:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 821,
+        'created_at' => '2021-03-10T21:06:40.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 822,
+        'created_at' => '2021-03-10T22:57:18.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:40.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T22:57:18.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+)  
+[2021-03-14 16:45:09] local.WARNING: suss  
+[2021-03-14 16:45:09] local.WARNING: array (
+  'neworders' => 
+  array (
+  ),
+  'accepted' => 
+  array (
+  ),
+  'done' => 
+  array (
+    0 => 
+    array (
+      'id' => 615,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:17:03.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 17,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 615,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/615',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+    1 => 
+    array (
+      'id' => 614,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:11:52.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 18,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 614,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/614',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+  ),
+)  
+[2021-03-14 18:15:18] local.WARNING: array (
+  0 => 
+  array (
+    'id' => 615,
+    'created_at' => '2021-03-11T12:13:19.000000Z',
+    'updated_at' => '2021-03-11T12:17:03.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '1',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 832,
+        'created_at' => '2021-03-11T12:13:19.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 834,
+        'created_at' => '2021-03-11T12:13:58.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 835,
+        'created_at' => '2021-03-11T12:16:15.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:13:58.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:16:15.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'id' => 614,
+    'created_at' => '2021-03-11T12:05:39.000000Z',
+    'updated_at' => '2021-03-11T12:11:52.000000Z',
+    'address_id' => 15,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 828,
+        'created_at' => '2021-03-11T12:05:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 830,
+        'created_at' => '2021-03-11T12:11:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 831,
+        'created_at' => '2021-03-11T12:11:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  2 => 
+  array (
+    'id' => 613,
+    'created_at' => '2021-03-10T23:09:16.000000Z',
+    'updated_at' => '2021-03-10T23:10:59.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 823,
+        'created_at' => '2021-03-10T23:09:16.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 825,
+        'created_at' => '2021-03-10T23:09:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 826,
+        'created_at' => '2021-03-10T23:10:06.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 827,
+        'created_at' => '2021-03-10T23:10:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:09:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:06.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  3 => 
+  array (
+    'id' => 612,
+    'created_at' => '2021-03-10T21:06:11.000000Z',
+    'updated_at' => '2021-03-10T22:57:18.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 818,
+        'created_at' => '2021-03-10T21:06:11.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 820,
+        'created_at' => '2021-03-10T21:06:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 821,
+        'created_at' => '2021-03-10T21:06:40.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 822,
+        'created_at' => '2021-03-10T22:57:18.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:40.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T22:57:18.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+)  
+[2021-03-14 18:15:18] local.WARNING: suss  
+[2021-03-14 18:15:18] local.WARNING: array (
+  'neworders' => 
+  array (
+  ),
+  'accepted' => 
+  array (
+  ),
+  'done' => 
+  array (
+    0 => 
+    array (
+      'id' => 615,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:17:03.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 17,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 615,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/615',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+    1 => 
+    array (
+      'id' => 614,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:11:52.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 18,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 614,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/614',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+  ),
+)  
+[2021-03-14 18:15:23] local.WARNING: array (
+  0 => 
+  array (
+    'id' => 615,
+    'created_at' => '2021-03-11T12:13:19.000000Z',
+    'updated_at' => '2021-03-11T12:17:03.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '1',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 832,
+        'created_at' => '2021-03-11T12:13:19.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 834,
+        'created_at' => '2021-03-11T12:13:58.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 835,
+        'created_at' => '2021-03-11T12:16:15.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:13:58.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:16:15.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'id' => 614,
+    'created_at' => '2021-03-11T12:05:39.000000Z',
+    'updated_at' => '2021-03-11T12:11:52.000000Z',
+    'address_id' => 15,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 828,
+        'created_at' => '2021-03-11T12:05:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 830,
+        'created_at' => '2021-03-11T12:11:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 831,
+        'created_at' => '2021-03-11T12:11:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  2 => 
+  array (
+    'id' => 613,
+    'created_at' => '2021-03-10T23:09:16.000000Z',
+    'updated_at' => '2021-03-10T23:10:59.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 823,
+        'created_at' => '2021-03-10T23:09:16.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 825,
+        'created_at' => '2021-03-10T23:09:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 826,
+        'created_at' => '2021-03-10T23:10:06.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 827,
+        'created_at' => '2021-03-10T23:10:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:09:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:06.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  3 => 
+  array (
+    'id' => 612,
+    'created_at' => '2021-03-10T21:06:11.000000Z',
+    'updated_at' => '2021-03-10T22:57:18.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 818,
+        'created_at' => '2021-03-10T21:06:11.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 820,
+        'created_at' => '2021-03-10T21:06:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 821,
+        'created_at' => '2021-03-10T21:06:40.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 822,
+        'created_at' => '2021-03-10T22:57:18.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:40.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T22:57:18.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+)  
+[2021-03-14 18:15:23] local.WARNING: suss  
+[2021-03-14 18:15:23] local.WARNING: array (
+  'neworders' => 
+  array (
+  ),
+  'accepted' => 
+  array (
+  ),
+  'done' => 
+  array (
+    0 => 
+    array (
+      'id' => 615,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:17:03.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 17,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 615,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/615',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+    1 => 
+    array (
+      'id' => 614,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:11:52.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 18,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 614,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/614',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+  ),
+)  
+[2021-03-14 18:43:28] local.WARNING: array (
+  0 => 
+  array (
+    'id' => 615,
+    'created_at' => '2021-03-11T12:13:19.000000Z',
+    'updated_at' => '2021-03-11T12:17:03.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '1',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 832,
+        'created_at' => '2021-03-11T12:13:19.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 834,
+        'created_at' => '2021-03-11T12:13:58.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 835,
+        'created_at' => '2021-03-11T12:16:15.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:13:58.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:16:15.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'id' => 614,
+    'created_at' => '2021-03-11T12:05:39.000000Z',
+    'updated_at' => '2021-03-11T12:11:52.000000Z',
+    'address_id' => 15,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 828,
+        'created_at' => '2021-03-11T12:05:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 830,
+        'created_at' => '2021-03-11T12:11:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 831,
+        'created_at' => '2021-03-11T12:11:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  2 => 
+  array (
+    'id' => 613,
+    'created_at' => '2021-03-10T23:09:16.000000Z',
+    'updated_at' => '2021-03-10T23:10:59.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 823,
+        'created_at' => '2021-03-10T23:09:16.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 825,
+        'created_at' => '2021-03-10T23:09:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 826,
+        'created_at' => '2021-03-10T23:10:06.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 827,
+        'created_at' => '2021-03-10T23:10:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:09:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:06.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  3 => 
+  array (
+    'id' => 612,
+    'created_at' => '2021-03-10T21:06:11.000000Z',
+    'updated_at' => '2021-03-10T22:57:18.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 818,
+        'created_at' => '2021-03-10T21:06:11.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 820,
+        'created_at' => '2021-03-10T21:06:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 821,
+        'created_at' => '2021-03-10T21:06:40.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 822,
+        'created_at' => '2021-03-10T22:57:18.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:40.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T22:57:18.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+)  
+[2021-03-14 18:43:28] local.WARNING: suss  
+[2021-03-14 18:43:28] local.WARNING: array (
+  'neworders' => 
+  array (
+  ),
+  'accepted' => 
+  array (
+  ),
+  'done' => 
+  array (
+    0 => 
+    array (
+      'id' => 615,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:17:03.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 17,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 615,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/615',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+    1 => 
+    array (
+      'id' => 614,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:11:52.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 18,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 614,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/614',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+  ),
+)  
+[2021-03-14 18:43:31] local.WARNING: array (
+  0 => 
+  array (
+    'id' => 615,
+    'created_at' => '2021-03-11T12:13:19.000000Z',
+    'updated_at' => '2021-03-11T12:17:03.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '1',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 832,
+        'created_at' => '2021-03-11T12:13:19.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 834,
+        'created_at' => '2021-03-11T12:13:58.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 835,
+        'created_at' => '2021-03-11T12:16:15.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 615,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:13:19.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:13:58.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:16:15.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 615,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  1 => 
+  array (
+    'id' => 614,
+    'created_at' => '2021-03-11T12:05:39.000000Z',
+    'updated_at' => '2021-03-11T12:11:52.000000Z',
+    'address_id' => 15,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'unpaid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 828,
+        'created_at' => '2021-03-11T12:05:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 830,
+        'created_at' => '2021-03-11T12:11:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 831,
+        'created_at' => '2021-03-11T12:11:39.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 614,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-11T12:05:39.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-11T12:11:39.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 614,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  2 => 
+  array (
+    'id' => 613,
+    'created_at' => '2021-03-10T23:09:16.000000Z',
+    'updated_at' => '2021-03-10T23:10:59.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 18,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 823,
+        'created_at' => '2021-03-10T23:09:16.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 825,
+        'created_at' => '2021-03-10T23:09:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 826,
+        'created_at' => '2021-03-10T23:10:06.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 827,
+        'created_at' => '2021-03-10T23:10:59.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 613,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T23:09:16.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:09:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:06.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T23:10:59.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 613,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+  3 => 
+  array (
+    'id' => 612,
+    'created_at' => '2021-03-10T21:06:11.000000Z',
+    'updated_at' => '2021-03-10T22:57:18.000000Z',
+    'address_id' => 14,
+    'client_id' => 15,
+    'restorant_id' => 19,
+    'driver_id' => 17,
+    'delivery_price' => 0.0,
+    'order_price' => 2.0,
+    'payment_method' => 'cod',
+    'payment_status' => 'paid',
+    'comment' => ' ',
+    'lat' => NULL,
+    'lng' => NULL,
+    'srtipe_payment_id' => NULL,
+    'fee' => 0.0,
+    'fee_value' => '0.0000',
+    'static_fee' => 0.0,
+    'delivery_method' => 1,
+    'delivery_pickup_interval' => '1050_1080',
+    'vatvalue' => 0.0,
+    'payment_processor_fee' => 0.0,
+    'time_to_prepare' => NULL,
+    'table_id' => NULL,
+    'phone' => NULL,
+    'whatsapp_address' => NULL,
+    'payment_link' => '',
+    'payback' => '5',
+    'status_completo' => 
+    array (
+      0 => 
+      array (
+        'id' => 818,
+        'created_at' => '2021-03-10T21:06:11.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 1,
+        'user_id' => 15,
+        'comment' => '',
+      ),
+      1 => 
+      array (
+        'id' => 820,
+        'created_at' => '2021-03-10T21:06:34.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 3,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      2 => 
+      array (
+        'id' => 821,
+        'created_at' => '2021-03-10T21:06:40.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 5,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+      3 => 
+      array (
+        'id' => 822,
+        'created_at' => '2021-03-10T22:57:18.000000Z',
+        'updated_at' => NULL,
+        'order_id' => 612,
+        'status_id' => 7,
+        'user_id' => 13,
+        'comment' => '',
+      ),
+    ),
+    'status' => 
+    array (
+      0 => 
+      array (
+        'id' => 1,
+        'name' => 'Just created',
+        'alias' => 'just_created',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 1,
+          'user_id' => 15,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => '',
+        ),
+      ),
+      1 => 
+      array (
+        'id' => 2,
+        'name' => 'Accepted by admin',
+        'alias' => 'accepted_by_admin',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 2,
+          'user_id' => 1,
+          'created_at' => '2021-03-10T21:06:11.000000Z',
+          'comment' => 'Automatically approved by admin',
+        ),
+      ),
+      2 => 
+      array (
+        'id' => 3,
+        'name' => 'Accepted by restaurant',
+        'alias' => 'accepted_by_restaurant',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 3,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:34.000000Z',
+          'comment' => '',
+        ),
+      ),
+      3 => 
+      array (
+        'id' => 5,
+        'name' => 'Prepared',
+        'alias' => 'prepared',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 5,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T21:06:40.000000Z',
+          'comment' => '',
+        ),
+      ),
+      4 => 
+      array (
+        'id' => 7,
+        'name' => 'Delivered',
+        'alias' => 'delivered',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'status_id' => 7,
+          'user_id' => 13,
+          'created_at' => '2021-03-10T22:57:18.000000Z',
+          'comment' => '',
+        ),
+      ),
+    ),
+    'client' => 
+    array (
+      'id' => 15,
+      'google_id' => NULL,
+      'fb_id' => NULL,
+      'name' => 'jose diego',
+      'email' => 'josediego@gmail.com',
+      'email_verified_at' => NULL,
+      'phone' => '657804567',
+      'created_at' => '2021-03-09T21:39:45.000000Z',
+      'updated_at' => '2021-03-09T21:39:45.000000Z',
+      'active' => 1,
+      'stripe_id' => NULL,
+      'card_brand' => NULL,
+      'card_last_four' => NULL,
+      'trial_ends_at' => NULL,
+      'verification_code' => NULL,
+      'phone_verified_at' => NULL,
+      'plan_id' => NULL,
+      'plan_status' => '',
+      'cancel_url' => '',
+      'update_url' => '',
+      'checkout_id' => '',
+      'subscription_plan_id' => '',
+      'stripe_account' => '',
+      'birth_date' => '',
+      'lat' => NULL,
+      'lng' => NULL,
+      'working' => 1,
+      'onorder' => NULL,
+      'numorders' => 0,
+      'rejectedorders' => 0,
+      'paypal_subscribtion_id' => NULL,
+      'mollie_customer_id' => NULL,
+      'mollie_mandate_id' => NULL,
+      'tax_percentage' => '0.0000',
+      'extra_billing_information' => NULL,
+      'mollie_subscribtion_id' => NULL,
+      'paystack_subscribtion_id' => NULL,
+      'paystack_trans_id' => NULL,
+      'restorant_id' => NULL,
+    ),
+    'restorant' => 
+    array (
+      'id' => 19,
+      'created_at' => '2021-03-09T20:09:43.000000Z',
+      'updated_at' => '2021-03-13T12:18:24.000000Z',
+      'name' => 'tienda reyes',
+      'subdomain' => 'tiendareyes',
+      'logo' => '',
+      'cover' => '',
+      'active' => 1,
+      'user_id' => 13,
+      'lat' => '0',
+      'lng' => '0',
+      'address' => '',
+      'phone' => '651613895',
+      'minimum' => '0',
+      'description' => '',
+      'fee' => 0.0,
+      'static_fee' => 0.0,
+      'radius' => 
+      array (
+      ),
+      'is_featured' => 0,
+      'city_id' => NULL,
+      'views' => 23,
+      'can_pickup' => 1,
+      'can_deliver' => 1,
+      'self_deliver' => 0,
+      'free_deliver' => 0,
+      'whatsapp_phone' => NULL,
+      'fb_username' => NULL,
+      'do_covertion' => 1,
+      'currency' => '',
+      'payment_info' => '',
+      'mollie_payment_key' => '',
+      'category' => '2',
+      'alias' => 'tiendareyes',
+      'logom' => '/default/restaurant_large.jpg',
+      'icon' => '/default/restaurant_thumbnail.jpg',
+      'coverm' => '/default/cover.jpg',
+    ),
+    'table' => NULL,
+    'items' => 
+    array (
+      0 => 
+      array (
+        'id' => 342,
+        'name' => 'Coca cola 2l',
+        'description' => 'Coca cola 2l',
+        'image' => '',
+        'price' => 2.0,
+        'category_id' => 70,
+        'created_at' => '2021-03-10T16:40:27.000000Z',
+        'updated_at' => '2021-03-10T16:40:27.000000Z',
+        'available' => 1,
+        'has_variants' => 0,
+        'vat' => NULL,
+        'deleted_at' => NULL,
+        'logom' => '/default/restaurant_large.jpg',
+        'icon' => '/default/restaurant_large.jpg',
+        'short_description' => 'Coca cola 2l',
+        'pivot' => 
+        array (
+          'order_id' => 612,
+          'item_id' => 342,
+          'qty' => 1,
+          'extras' => '[]',
+          'vat' => NULL,
+          'vatvalue' => 0.0,
+          'variant_price' => 2.0,
+          'variant_name' => '',
+        ),
+      ),
+    ),
+  ),
+)  
+[2021-03-14 18:43:31] local.WARNING: suss  
+[2021-03-14 18:43:31] local.WARNING: array (
+  'neworders' => 
+  array (
+  ),
+  'accepted' => 
+  array (
+  ),
+  'done' => 
+  array (
+    0 => 
+    array (
+      'id' => 615,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:17:03.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 17,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 615,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'address' => '10, Av. Veintiocho de Febrero, 157, 21710 Bollullos Par del Condado, Huelva, Spain',
+          'created_at' => '2021-03-10 00:16:41',
+          'updated_at' => '2021-03-10 00:16:41',
+          'lat' => '37.3456868',
+          'lng' => '-6.539807599999999',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/615',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+    1 => 
+    array (
+      'id' => 614,
+      'restaurant_name' => 'tienda reyes',
+      'last_status' => 'Prepared',
+      'last_status_id' => 5,
+      'time' => '2021-03-11T12:11:52.000000Z',
+      'client' => 'jose diego',
+      'phone' => '657804567',
+      'driver_id' => 18,
+      'delivery_method' => 1,
+      'item' => 
+      array (
+        0 => 
+        array (
+          'id' => 342,
+          'name' => 'Coca cola 2l',
+          'description' => 'Coca cola 2l',
+          'image' => '',
+          'price' => 2.0,
+          'category_id' => 70,
+          'created_at' => '2021-03-10T16:40:27.000000Z',
+          'updated_at' => '2021-03-10T16:40:27.000000Z',
+          'available' => 1,
+          'has_variants' => 0,
+          'vat' => NULL,
+          'deleted_at' => NULL,
+          'logom' => '/default/restaurant_large.jpg',
+          'icon' => '/default/restaurant_large.jpg',
+          'short_description' => 'Coca cola 2l',
+          'pivot' => 
+          array (
+            'order_id' => 614,
+            'item_id' => 342,
+            'qty' => 1,
+            'extras' => '[]',
+            'vat' => NULL,
+            'vatvalue' => 0.0,
+            'variant_price' => 2.0,
+            'variant_name' => '',
+          ),
+        ),
+      ),
+      'Address' => 
+      App\Address::__set_state(array(
+         'fillable' => 
+        array (
+          0 => 'address',
+          1 => 'lat',
+          2 => 'lng',
+          3 => 'apartment',
+          4 => 'intercom',
+          5 => 'floor',
+          6 => 'entry',
+        ),
+         'table' => 'address',
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'address' => '10, Calle Larga, Bollullos de la Mitación, Spain',
+          'created_at' => '2021-03-11 00:08:51',
+          'updated_at' => '2021-03-11 00:08:51',
+          'lat' => '37.3380323',
+          'lng' => '-6.1377096',
+          'active' => 1,
+          'user_id' => 15,
+          'apartment' => NULL,
+          'intercom' => NULL,
+          'floor' => NULL,
+          'entry' => NULL,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      'link' => '/orders/614',
+      'price' => '$2.00',
+      'pulse' => 'blob greenstatic',
+    ),
+  ),
+)  
