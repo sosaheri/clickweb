@@ -51,7 +51,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('removedemodata', 'RestorantController@removedemo')->name('restaurants.removedemo');
         Route::get('sitemap','SettingsController@regenerateSitemap')->name('regenerate.sitemap');
 
-        // Landing page settings 
+        // Landing page settings
         Route::get('landing', 'SettingsController@landing')->name('landing');
         Route::prefix('landing')->name('landing.')->group(function () {
             Route::resource('features', 'FeaturesController');
@@ -214,7 +214,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
     Route::get('/execute-payment-pp', 'PaymentController@executePaymentPayPal')->name('execute-payment');
-    
+
 
     Route::post('/paypal/subscribe', 'PlansController@subscribePayPal')->name('subscribe-paypal');
     Route::post('subscription/actions', 'PlansController@updateCancelSubscription')->name('subscription.actions');
@@ -293,3 +293,5 @@ Route::post('webhooks/mollie', 'PaymentController@handleWebhookNotification')->n
 Route::get('order/success', 'OrderController@success')->name('order.success');
 
 Route::post('/fb-order', 'OrderController@fbOrderMsg')->name('fb.order');
+
+URL::forceScheme('https');
