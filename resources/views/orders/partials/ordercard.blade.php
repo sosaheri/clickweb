@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         @hasrole('admin|driver')
-                            <div class="col-md-3">
+                            {{-- <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="form-control-label" for="restorant">{{ __('Filter by Restaurant') }}</label>
                                     <select class="form-control select2" name="restorant_id">
@@ -52,11 +52,11 @@
                                         @endforeach
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                         @endif
                         @if (config('app.isft'))
                         @hasrole('admin|owner')
-                        <div class="col-md-3">
+                        {{-- <div class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label" for="client">{{ __('Filter by Client') }}</label>
 
@@ -67,10 +67,10 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
                         @endif
                         @hasrole('admin|owner')
-                        <div class="col-md-3">
+                        {{-- <div class="col-md-3">
                             <div class="form-group">
                                 <label class="form-control-label" for="driver">{{ __('Filter by Driver') }}</label>
                                 <select class="form-control select2" name="driver_id">
@@ -80,14 +80,16 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
-                        @endif    
+                        </div> --}}
+                        @endif
                         @else
                         @endif
-                        
+
                     </div>
 
-                        <div class="col-md-6 offset-md-6">
+
+
+                    <div class="col-md-6 offset-md-6">
                             <div class="row">
                                 @if ($parameters)
                                     <div class="col-md-4">
@@ -105,6 +107,7 @@
                                 </div>
                         </div>
                     </div>
+
              </div>
         </form>
         @endif
@@ -112,6 +115,8 @@
     <div class="col-12">
         @include('partials.flash')
     </div>
+
+
     @if(count($orders))
     <div class="table-responsive">
         <table class="table align-items-center">
