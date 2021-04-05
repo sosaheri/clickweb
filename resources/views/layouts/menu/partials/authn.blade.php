@@ -56,7 +56,7 @@
 
     @endif
     @if(auth()->user()->hasRole('driver'))
-        <a href="/orders" class="dropdown-item">{{ __('Orders') }}</a>
+        <a href="/orders" class="dropdown-item">{{ __('Ordenes') }}</a>
     @endif
 
    <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
