@@ -87,4 +87,10 @@
             </a>
     </li>
 
+            <li class="nav-item">
+        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="ni ni-button-power text-orange"></i> {{ __('Cerrar Sesión') }}
+        </a>
+    </li>
+
 </ul>
