@@ -65,7 +65,7 @@ class OrderController extends Controller
             $orders = $orders->where(['driver_id'=>auth()->user()->id]);
         //Get owner's restorant orders
         } elseif (auth()->user()->hasRole('owner')) {
-             
+
             //Change currency
             ConfChanger::switchCurrency(auth()->user()->restorant);
 
@@ -152,7 +152,7 @@ class OrderController extends Controller
             'parameters'=>count($_GET) != 0,
         ]);
     }
-     
+
       /**
      * Display a listing of the resource.
      *
@@ -167,14 +167,14 @@ class OrderController extends Controller
         ////Get driver's orders
         } elseif (auth()->user()->hasRole('driver')) {
             return redirect()->route('orders.index');
-        } 
+        }
 
         $this->migrateStatuses();
 
         $restorants = Restorant::where(['active'=>1])->get();
         $drivers = User::role('driver')->where(['active'=>1])->get();
         $clients = User::role('client')->where(['active'=>1])->get();
-        
+
              //BY DATE TO
         if (isset($_GET['orden']) && isset($_GET['driver']) ){
                  $newDriver = Order::find($_GET['orden']);
@@ -185,7 +185,7 @@ class OrderController extends Controller
                 $newDriver->status()->attach([4 => ['comment'=>'System', 'user_id' => $_GET['driver']]]);
 
             //Now increment the driver orders
-                
+
                  $indenpent->numorders = $indenpent->numorders + 1;
                  $indenpent->update();
             }
@@ -201,20 +201,20 @@ class OrderController extends Controller
              if($driver->restorant_id == auth()->user()->restorant->id) {
                 $driversData[$driver->id] = $driver->name;
             }
-            
+
         }
 
         // $orders = Order::orderBy('created_at', 'desc');
 
       if (auth()->user()->hasRole('owner')) {
-             
+
             //Change currency
             ConfChanger::switchCurrency(auth()->user()->restorant);
 
             // $orders = $orders->where(['restorant_id'=>auth()->user()->restorant->id]);
         }
 
-      
+
 
         // //FILTER BT RESTORANT
         // if (isset($_GET['restorant_id'])) {
@@ -226,7 +226,7 @@ class OrderController extends Controller
         //If owner, only from his restorant
         if (auth()->user()->hasRole('owner')) {
             $orders = $orders->where(['restorant_id'=>auth()->user()->restorant->id]);
-            
+
             //Change currency
             ConfChanger::switchCurrency(auth()->user()->restorant);
 
@@ -237,13 +237,13 @@ class OrderController extends Controller
 
 
         $orders = $orders->with(['status', 'client', 'restorant', 'table.restoarea','items'])->get()->toArray();
-  
+
           Log::warning(  $orders );
 
         $newOrders = [];
         $acceptedOrders = [];
         $doneOrders = [];
-    
+
         $items = [];
                foreach ($orders as $key => $order) {
                 if ($order['address_id'] >= 1) {
@@ -251,7 +251,7 @@ class OrderController extends Controller
                 }else{
                       $Address = '';
                 }
-              
+
             $client="";
             if(config('app.isft')){
                 $client=$order['client']['name'];
@@ -352,7 +352,7 @@ class OrderController extends Controller
           if (auth()->user()->hasRole('owner')) {
             foreach ($items as $key => $item) {
 
-                
+
                 //Box 1 - New Orders
                 //Today orders that are approved by admin ( Needs approvment or rejection )
                 //Box 2 - Accepted
@@ -371,7 +371,7 @@ class OrderController extends Controller
                     array_push($acceptedOrders, $item);
                 } elseif ($last_status == 5 || $last_status == 12) {
                     $item['pulse'] = 'blob greenstatic';
-                  
+
                     array_push($doneOrders, $item);
                 }
             }
@@ -382,8 +382,8 @@ class OrderController extends Controller
                 'accepted'=>$acceptedOrders,
                 'done'=>$doneOrders,
             ];
-     
-Log::warning('suss');
+
+        Log::warning('suss');
         Log::warning(  $toRespond);
 
               if (isset($_GET['status_id'])) {
@@ -396,7 +396,7 @@ Log::warning('suss');
             'clients'=>$clients,
              'parameters'=>count($_GET) != 0,
              ]);
-            
+
 
 
                  # code...
@@ -409,7 +409,7 @@ Log::warning('suss');
                     'clients'=>$clients,
                     'parameters'=>count($_GET) != 0,
                 ]);
-                
+
 
 
                }
@@ -426,16 +426,16 @@ Log::warning('suss');
                }
 
 
-        
+
         }
 
         // $orders = $orders->paginate(10);
-         
 
-    //     // Log::warning($orders->status());
-    //      Log::warning('suss');
-    //       Log::warning($orders);
-        
+
+        //     // Log::warning($orders->status());
+        //      Log::warning('suss');
+        //       Log::warning($orders);
+
         return view('dashboard', [
             'orders' => $newOrders,
             'restorants'=>$restorants,
@@ -445,6 +445,7 @@ Log::warning('suss');
             'parameters'=>count($_GET) != 0,
         ]);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -453,8 +454,6 @@ Log::warning('suss');
     public function create()
     {
     }
-
-    
 
     private function toMobileLike(Request $request){
         /*{
@@ -507,7 +506,7 @@ Log::warning('suss');
         //DELIVERY METHOD
         //Default - pickup - since available everywhere
         $delivery_method="pickup";
-        
+
         //Delivery method - deliveryType - ft
         if($request->has('deliveryType')){
             $delivery_method=$request->deliveryType;
@@ -533,7 +532,7 @@ Log::warning('suss');
             $table_id=$request->table_id;
         }
 
-         //Phone 
+         //Phone
          $phone=null;
          if($request->has('phone')){
              $phone=$request->phone;
@@ -564,7 +563,7 @@ Log::warning('suss');
 
         //Convert web request to mobile like request
         $mobileLikeRequest=$this->toMobileLike($request);
-            
+
         //Data
         $vendor_id =  $mobileLikeRequest->vendor_id;
         $expedition= $mobileLikeRequest->delivery_method;
@@ -582,20 +581,20 @@ Log::warning('suss');
 
         //Proceed with validating the data
         $validator=$orderRepo->validateData();
-        if ($validator->fails()) { 
+        if ($validator->fails()) {
             notify()->error($validator->errors()->first());
-            return $orderRepo->redirectOrInform(); 
+            return $orderRepo->redirectOrInform();
         }
 
         //Proceed with making the order
-  
-    
+
+
         $validatorOnMaking=$orderRepo->makeOrder();
-         
-             
-        if ($validatorOnMaking->fails()) { 
-            notify()->error($validatorOnMaking->errors()->first()); 
-            return $orderRepo->redirectOrInfo($mobileLikeRequest->payback); 
+
+
+        if ($validatorOnMaking->fails()) {
+            notify()->error($validatorOnMaking->errors()->first());
+            return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
         }
 
         return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
@@ -693,7 +692,7 @@ Log::warning('suss');
         //If owner, only from his restorant
         if (auth()->user()->hasRole('owner')) {
             $orders = $orders->where(['restorant_id'=>auth()->user()->restorant->id]);
-            
+
             //Change currency
             ConfChanger::switchCurrency(auth()->user()->restorant);
 
@@ -702,7 +701,7 @@ Log::warning('suss');
         }
         $orders = $orders->with(['status', 'client', 'restorant', 'table.restoarea'])->get()->toArray();
 
-        
+
 
         $newOrders = [];
         $acceptedOrders = [];
@@ -776,7 +775,7 @@ Log::warning('suss');
         if (auth()->user()->hasRole('owner')) {
             foreach ($items as $key => $item) {
 
-                
+
                 //Box 1 - New Orders
                 //Today orders that are approved by admin ( Needs approvment or rejection )
                 //Box 2 - Accepted
@@ -954,10 +953,10 @@ Log::warning('suss');
             $order->lng = $order->restorant->lng;
             $order->update();
         }
-        
+
          if ($status_id_to_attach.'' == '12') {
             $order->driver_id = null;
-  
+
             $order->update();
         }
         if (config('app.isft') && $alias.'' == 'delivered') {
@@ -985,7 +984,7 @@ Log::warning('suss');
          if (isset($_GET['dashboard'])) {
              return redirect()->route('home')->withStatus(__('Order status succesfully changed.'));
 
-       
+
         }
 
        return redirect()->route('orders.index')->withStatus(__('Order status succesfully changed.'));
@@ -1037,7 +1036,6 @@ Log::warning('suss');
 
         return view('orders.guestorders', ['backUrl'=>$backUrl, 'orders'=>$orders, 'statuses'=>Status::pluck('name', 'id')]);
     }
-
 
     public function generateOrderMsg($address, $comment, $price)
     {
@@ -1119,16 +1117,16 @@ Log::warning('suss');
     }
 
     public function success(Request $request)
-    {   
+    {
 
-       
+
         $order = Order::findOrFail($request->order);
 
         //If order is not paid - redirect to payment
         if($request->redirectToPayment.""=="1"&&$order->payment_status != 'paid'&&strlen($order->payment_link)>5){
             //Redirect to payment
             return redirect($order->payment_link);
-        } 
+        }
 
         //If we have whatsapp send
         if($request->has('whatsapp')){
@@ -1153,7 +1151,7 @@ Log::warning('suss');
             }
         }
 
-        
+
         return view('orders.success', ['order' => $order,'showWhatsApp'=>$showWhatsApp]);
     }
 }
