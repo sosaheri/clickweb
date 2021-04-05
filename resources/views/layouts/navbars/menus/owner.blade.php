@@ -93,7 +93,7 @@
 
         <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}">
-                    <i class="ni ni-send text-green"></i> {{ __('Restaurant') }}
+                    <i class="ni ni-send text-green"></i> {{ __('Negocio') }}
                 </a>
         </li>
 
