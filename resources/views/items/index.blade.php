@@ -1,20 +1,20 @@
            @extends('layouts.app', ['title' =>' Administrador' ])
 
                         @section('admin_title')
-                           
+
                         @endsection
 
-            
+
 @section('content')
     @include('items.partials.modals')
-  
+
       @if(auth()->user()->hasRole('services'))
         @include('items.partials.header', ['title' => 'Administrador De Servicios'])
-            
+
                 @else
-                  @include('items.partials.header', ['title' => __('Edit Restaurant Menu')])
+                  @include('items.partials.header', ['title' => __('Editar productos de negocio')])
                 @endif
-            
+
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -25,15 +25,15 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col">
-                                     
+
 
                @if(auth()->user()->hasRole('services'))
                <h3 class="mb-0">Administrador De Servicios</h3>
                 @else
-                   <h3 class="mb-0">{{ __('Restaurant Menu Management') }} @if(config('settings.enable_miltilanguage_menus')) ({{ $currentLanguage}}) @endif</h3>
+                   <h3 class="mb-0">{{ __('Gestión de productos de negocio') }} @if(config('settings.enable_miltilanguage_menus')) ({{ $currentLanguage}}) @endif</h3>
                 @endif
-            
-                                        
+
+
                                     </div>
                                     <div class="col-auto">
                                         <button class="btn btn-icon btn-1 btn-sm btn-primary" type="button" data-toggle="modal" data-target="#modal-items-category" data-toggle="tooltip" data-placement="top" title="{{ __('Add new category')}}">

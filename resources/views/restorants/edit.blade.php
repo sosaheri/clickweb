@@ -1,6 +1,6 @@
 @extends('layouts.app', ['title' => __('Orders')])
 @section('admin_title')
-    {{__('Restaurant Management')}}
+    {{__('Gestión de Negocios')}}
 @endsection
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -13,10 +13,12 @@
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Restaurant Management') }}</h3>
+                                <h3 class="mb-0">    {{__('Gestión de Negocios')}}</h3>
+
                                 @if (config('settings.wildcard_domain_ready'))
                                     <span class="blockquote-footer">{{ $restorant->getLinkAttribute() }}</span>
                                 @endif
+
                             </div>
                             <div class="col-4 text-right">
                                 @if(auth()->user()->hasRole('admin'))
@@ -34,7 +36,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                       <h6 class="heading-small text-muted mb-4">{{ __('Restaurant information') }}</h6>
+                       <h6 class="heading-small text-muted mb-4">{{ __('Información del negocio') }}</h6>
                         @include('partials.flash')
                         @include('restorants.partials.info')
                             <hr />
@@ -46,7 +48,7 @@
                     <br/>
                   <!--   @include('restorants.partials.location')
                     <br/> -->
-                    @include('restorants.partials.hours')
+                    {{-- @include('restorants.partials.hours') --}}
 
                 @if(auth()->user()->hasRole('admin')&&config('app.isqrsaas'))
                     <br />

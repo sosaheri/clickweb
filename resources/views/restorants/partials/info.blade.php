@@ -4,19 +4,19 @@
         @method('put')
         <input type="hidden" id="rid" value="{{ $restorant->id }}"/>
         @include('partials.fields',['fields'=>[
-            ['ftype'=>'input','name'=>"Restaurant Name",'id'=>"name",'placeholder'=>"Restaurant Name",'required'=>true,'value'=>$restorant->name],
-            ['ftype'=>'input','name'=>"Restaurant Description",'id'=>"description",'placeholder'=>"Restaurant description",'required'=>true,'value'=>$restorant->description],
-            ['ftype'=>'input','name'=>"Restaurant Address",'id'=>"address",'placeholder'=>"Restaurant description",'required'=>true,'value'=>$restorant->address],
-            ['ftype'=>'input','name'=>"Restaurant Phone",'id'=>"phone",'placeholder'=>"Restaurant phone",'required'=>true,'value'=>$restorant->phone],
+            ['ftype'=>'input','name'=>"Nombre de negocio",'id'=>"name",'placeholder'=>"Nombre de negocio",'required'=>true,'value'=>$restorant->name],
+            ['ftype'=>'input','name'=>"Descripción del negocio",'id'=>"description",'placeholder'=>"Descripción del negocio",'required'=>true,'value'=>$restorant->description],
+            ['ftype'=>'input','name'=>"Dirección del negocio",'id'=>"address",'placeholder'=>"Dirección del negocio",'required'=>true,'value'=>$restorant->address],
+            ['ftype'=>'input','name'=>"Teléfono",'id'=>"phone",'placeholder'=>"Teléfono",'required'=>true,'value'=>$restorant->phone],
         ]])
     <!--     @if(config('settings.multi_city'))
             @include('partials.fields',['fields'=>[
-                ['ftype'=>'select','name'=>"Restaurant city",'id'=>"city_id",'data'=>$cities,'required'=>true,'value'=>$restorant->city_id],
+                ['ftype'=>'select','name'=>"city",'id'=>"city_id",'data'=>$cities,'required'=>true,'value'=>$restorant->city_id],
             ]])
         @endif -->
         @if(config('app.ordering'))
             <div class="form-group{{ $errors->has('minimum') ? ' has-danger' : '' }}">
-                <label class="form-control-label" for="input-description">{{ __('Minimum order') }}</label>
+                <label class="form-control-label" for="input-description">{{ __('Orden minima') }}</label>
                 <input type="number" name="minimum" id="input-minimum" class="form-control form-control-alternative{{ $errors->has('minimum') ? ' is-invalid' : '' }}" placeholder="{{ __('Enter Minimum order value') }}" value="{{ old('minimum', $restorant->minimum) }}" required autofocus>
                 @if ($errors->has('minimum'))
                     <span class="invalid-feedback" role="alert">
@@ -59,7 +59,7 @@
         @endif
         <br/>
         @if(config('app.isft'))
-        
+
         @include('partials.fields',['fields'=>[
             ['ftype'=>'bool','name'=>"Pickup",'id'=>"can_pickup",'value'=>$restorant->can_pickup == 1 ? "true" : "false"],
             ['ftype'=>'bool','name'=>"Delivery",'id'=>"can_deliver",'value'=>$restorant->can_deliver == 1 ? "true" : "false"],
@@ -68,13 +68,13 @@
         ]])
 
         @endif
-        
+
         <br/>
         <div class="row">
             <?php
                 $images=[
-                    ['name'=>'resto_logo','label'=>__('Restaurant Image'),'value'=>$restorant->logom,'style'=>'width: 295px; height: 200px;'],
-                    ['name'=>'resto_cover','label'=>__('Restaurant Cover Image'),'value'=>$restorant->coverm,'style'=>'width: 200px; height: 100px;']
+                    ['name'=>'resto_logo','label'=>__('Image'),'value'=>$restorant->logom,'style'=>'width: 295px; height: 200px;'],
+                    ['name'=>'resto_cover','label'=>__('Cover Image'),'value'=>$restorant->coverm,'style'=>'width: 200px; height: 100px;']
                 ]
             ?>
             @foreach ($images as $image)
@@ -103,11 +103,11 @@
 
         <!-- WHATS APP MODE -->
         @if (config('settings.is_whatsapp_ordering_mode'))
-            @include('restorants.partials.social_info')  
+            @include('restorants.partials.social_info')
         @endif
 
-    
-        
+
+
 
         <div class="text-center">
             <button type="submit" class="btn btn-success mt-4">{{ __('Save') }}</button>
