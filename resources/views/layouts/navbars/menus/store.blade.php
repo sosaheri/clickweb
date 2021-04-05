@@ -5,7 +5,7 @@
                 <i class="ni ni-tv-2 text-primary"></i> Tablero
             </a>
         </li>
-<!-- 
+<!--
         <li class="nav-item">
             <a class="nav-link" href="/live">
                 <i class="ni ni-basket text-success"></i> {{ __('Live Orders') }}<div class="blob red"></div>
@@ -15,7 +15,7 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('orders.index') }}">
-                <i class="ni ni-basket text-orangse"></i> Pedidos 
+                <i class="ni ni-basket text-orangse"></i> Pedidos
             </a>
         </li>
     @endif
@@ -71,10 +71,10 @@
                 </a>
             </li>
         @endif
-        
+
          <li class="nav-item">
         <a class="nav-link" href="{{ route('driver.employ.show') }}">
-            <i class="ni ni-collection text-pink"></i> Empleados
+            <i class="ni ni-collection text-pink"></i> {{ __('Riders') }}
         </a>
         </li>
 
@@ -91,11 +91,29 @@
         </li>
     -->
 
+        <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}">
+                    <i class="ni ni-send text-green"></i> {{ __('Restaurant') }}
+                </a>
+        </li>
 
-    <li class="nav-item">
-            <a class="nav-link" href="{{ route('share.menu') }}">
-                <i class="ni ni-send text-green"></i> {{ __('Share') }}
+        <li class="nav-item">
+                <a class="nav-link" href="/items">
+                    <i class="ni ni-send text-green"></i> {{ __('Productos') }}
+                </a>
+        </li>
+
+
+        <li class="nav-item">
+                <a class="nav-link" href="{{ route('share.menu') }}">
+                    <i class="ni ni-send text-green"></i> {{ __('Share') }}
+                </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="ni ni-button-power text-orange"></i> {{ __('Cerrar Sesión') }}
             </a>
-    </li>
+        </li>
 
 </ul>
