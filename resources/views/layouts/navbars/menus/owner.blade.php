@@ -89,19 +89,31 @@
                 <i class="ni ni-tag text-pink"></i> {{ __('Coupons') }}
             </a>
         </li>
-    -->
-
-
-    <li class="nav-item">
-            <a class="nav-link" href="{{ route('share.menu') }}">
-                <i class="ni ni-send text-green"></i> {{ __('Share') }}
-            </a>
-    </li>
+        -->
 
         <li class="nav-item">
-        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <i class="ni ni-button-power text-orange"></i> {{ __('Cerrar Sesión') }}
-        </a>
-    </li>
+                <a class="nav-link" href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}">
+                    <i class="ni ni-send text-green"></i> {{ __('Restaurant') }}
+                </a>
+        </li>
+
+        <li class="nav-item">
+                <a class="nav-link" href="/items">
+                    <i class="ni ni-send text-green"></i> {{ __('Productos') }}
+                </a>
+        </li>
+
+
+        <li class="nav-item">
+                <a class="nav-link" href="{{ route('share.menu') }}">
+                    <i class="ni ni-send text-green"></i> {{ __('Share') }}
+                </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="ni ni-button-power text-orange"></i> {{ __('Cerrar Sesión') }}
+            </a>
+        </li>
 
 </ul>
