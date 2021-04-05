@@ -47,17 +47,19 @@
     @endif
     @if(auth()->user()->hasRole('client'))
         <!--<a href="/linklist" class="dropdown-item">Listado de Links</a>-->
-        <a href="/" class="dropdown-item">Restaurante</a>
+        <a href="/" class="dropdown-item">{{ __('Buscador') }}</a>
         <!--<a href="/shop" class="dropdown-item">Tiendas</a>-->
         <!--<a href="/service" class="dropdown-item">Servicios</a>-->
-        <a href="/orders" class="dropdown-item">Mis Ordenes</a>
-        <a href="/addresses" class="dropdown-item">Mis direcciones</a>
+        <a href="/linklist" class="dropdown-item">{{ __('Billetera') }}</a>
+        <a href="/orders" class="dropdown-item">{{ __('Mis Ordenes') }}</a>
+        {{-- <a href="/addresses" class="dropdown-item">Mis direcciones</a> --}}
+
     @endif
     @if(auth()->user()->hasRole('driver'))
         <a href="/orders" class="dropdown-item">{{ __('Orders') }}</a>
     @endif
 
    <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        <span>Cerrar sesion</span>
+        <span>{{ __('Cerrar Sesión') }}</span>
     </a>
 </div>
