@@ -2,7 +2,7 @@
 
     <label class="form-control-label">{{ __($name) }}</label><br />
 
-    <select class="form-control form-control-alternative   @isset($classselect) {{$classselect}} @endisset"  name="{{ $id }}" id="{{  $id }}">
+    <select class="livesearch form-control form-control-alternative   @isset($classselect) {{$classselect}} @endisset"  name="{{ $id }}" id="{{  $id }}">
         <option disabled selected value> {{ __('Select')." ".__($name)}} </option>
         @foreach ($data as $key => $item)
             @if (old($id)&&old($id).""==$key."")

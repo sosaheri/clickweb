@@ -185,11 +185,15 @@ $lastStatusAlisas=$order['last_status'] ;
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
+
                 <div class="modal-body p-0">
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-body px-lg-5 py-lg-5">
+
+
                             <form id="form-assing-driver" method="GET" action="{{url('home')."?status_id=1"}}">
-                                           <div class="modal-body">
+
+                                        <div class="modal-body">
 
                                              <input name="orden" id="orden" class="form-control"  type="text"  value="" hidden="true">
                                         </div>
@@ -200,9 +204,12 @@ $lastStatusAlisas=$order['last_status'] ;
                                     <button type="submit" class="btn btn-primary my-4">{{ __('Save') }}</button>
                                 </div>
                             </form>
+
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

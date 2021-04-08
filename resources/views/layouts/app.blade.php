@@ -46,7 +46,10 @@
         <!-- Custom CSS defined by admin -->
         <link type="text/css" href="{{ asset('byadmin') }}/back.css" rel="stylesheet">
 
-
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
 
 
     </head>
@@ -94,11 +97,11 @@
         <!-- Custom js -->
         <script src="{{ asset('custom') }}/js/orders.js"></script>
          <!-- Custom js -->
-        <script src="{{ asset('custom') }}/js/mresto.js"></script>
+        {{-- <script src="{{ asset('custom') }}/js/mresto.js"></script> --}}
         <!-- AJAX -->
 
         <!-- SELECT2 -->
-        <script src="{{ asset('custom') }}/js/select2.js"></script>
+        {{-- <script src="{{ asset('custom') }}/js/select2.js"></script> --}}
         <script src="{{ asset('vendor') }}/select2/select2.min.js"></script>
 
         <!-- DATE RANGE PICKER -->
@@ -149,6 +152,17 @@
 
 
         @endif
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+                            <script type="text/javascript">
+
+                            const element = document.querySelector('.livesearch');
+                            const choices = new Choices(element);
+
+
+                            </script>
+
 
         <!-- Custom JS defined by admin -->
         <?php echo file_get_contents(base_path('public/byadmin/back.js')) ?>
