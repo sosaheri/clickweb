@@ -153,7 +153,7 @@
 
         @endif
 
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
                             <script type="text/javascript">
 
@@ -161,7 +161,7 @@
                             const choices = new Choices(element);
 
 
-                            </script>
+                            </script> --}}
 
 
         <!-- Custom JS defined by admin -->
