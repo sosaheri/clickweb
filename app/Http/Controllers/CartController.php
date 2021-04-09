@@ -6,6 +6,7 @@ use Akaunting\Money\Currency;
 use Akaunting\Money\Money;
 use App\Items;
 use App\Models\Variants;
+use App\Models\PaymentMethod;
 use App\Order;
 use App\Restorant;
 use App\Tables;
@@ -25,7 +26,7 @@ class CartController extends Controller
 
         $restaurant = Restorant::findOrFail($restID);
         \App\Services\ConfChanger::switchCurrency($restaurant);
-        
+
 
         //Check if added item is from the same restorant as previus items in cart
         $canAdd = false;
@@ -116,7 +117,7 @@ class CartController extends Controller
                 break;
             }
 
-            
+
 
             //The restaurant
             $restaurant = Restorant::findOrFail($restorantID);
@@ -126,7 +127,7 @@ class CartController extends Controller
                 if($restaurant->currency!=""&&$restaurant->currency!=config('settings.cashier_currency')){
                     $enablePayments=false;
                 }
-            
+
             }
 
             //Change currency
@@ -158,7 +159,7 @@ class CartController extends Controller
                 $tablesData[$table->id] = $table->restoarea ? $table->restoarea->name.' - '.$table->name : $table->name;
             }
 
-        
+            $pm = PaymentMethod::where('user_id', $restaurant->user_id)->get();
 
             $params = [
                 'enablePayments'=>$enablePayments,
@@ -169,7 +170,9 @@ class CartController extends Controller
                 'openingTime' => $restaurant->hours && $restaurant->hours[$ourDateOfWeek.'_from'] ? $openingTime : null,
                 'closingTime' => $restaurant->hours && $restaurant->hours[$ourDateOfWeek.'_to'] ? $closingTime : null,
                 'addresses' => $addresses,
+                'pm' => $pm,
             ];
+
 
             return view('cart')->with($params);
         }else{
@@ -183,7 +186,7 @@ class CartController extends Controller
                 if(count($previousOrderArray) > 0){
                     foreach($previousOrderArray as $orderId){
                         $restorant = Order::where(['id'=>$orderId])->get()->first()->restorant;
-                       
+
                         $restorantInfo = $this->getRestaurantInfo($restorant, $previousOrderArray);
 
                         return view('restorants.show', [
@@ -200,7 +203,7 @@ class CartController extends Controller
                     }
                 }else{
                     return redirect()->route('front')->withError('Your cart is empty!');
-                }                
+                }
             }
         }
     }
