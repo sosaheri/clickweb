@@ -25,6 +25,13 @@
             <i class="ni ni-shop text-info"></i> Mi Negocio
         </a>
     </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('paymentMethod.index') }}">
+                    <i class="ni ni-credit-card text-green"></i> {{ __('Payment Methods') }}
+                </a>
+        </li>
+
     <li class="nav-item">
         <a class="nav-link" href="{{ route('items.index') }}">
             <i class="ni ni-collection text-pink"></i> Productos
@@ -90,18 +97,6 @@
             </a>
         </li>
     -->
-
-        <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}">
-                    <i class="ni ni-send text-green"></i> {{ __('Negocio') }}
-                </a>
-        </li>
-
-        <li class="nav-item">
-                <a class="nav-link" href="/items">
-                    <i class="ni ni-send text-green"></i> {{ __('Productos') }}
-                </a>
-        </li>
 
 
         <li class="nav-item">

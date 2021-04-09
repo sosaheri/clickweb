@@ -121,4 +121,9 @@ class User extends Authenticatable
         $body = __('Hi').' '.$this->name.".\n\n".__('Your verification code is').': '.$code;
         $client->messages->create($this->phone, ['from' => config('settings.twilio_from'), 'body' => $body]);
     }
+
+    public function payment_methods()
+    {
+        return $this->hasMany(PaymentMethod::class);
+    }
 }

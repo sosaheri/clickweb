@@ -294,3 +294,7 @@ Route::get('order/success', 'OrderController@success')->name('order.success');
 
 Route::post('/fb-order', 'OrderController@fbOrderMsg')->name('fb.order');
 
+
+// Payments methos
+
+Route::resource('paymentMethod', 'PaymentMethodController');

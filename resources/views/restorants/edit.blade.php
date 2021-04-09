@@ -48,7 +48,7 @@
                     <br/>
                   <!--   @include('restorants.partials.location')
                     <br/> -->
-                    {{-- @include('restorants.partials.hours') --}}
+                    @include('restorants.partials.hours')
 
                 @if(auth()->user()->hasRole('admin')&&config('app.isqrsaas'))
                     <br />
