@@ -33,17 +33,27 @@
         <a href="/settings" class="dropdown-item">{{ __('Settings') }}</a>
     @endif
     @if(auth()->user()->hasRole('owner'))
+
         <a href="/home" class="dropdown-item">{{ __('Dashboard') }}</a>
         <a class="dropdown-item " href="/live">{{ __('Live Orders') }}</a>
         <a href="/orders" class="dropdown-item">{{ __('Orders') }}</a>
-        <a href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}" class="dropdown-item">{{ __('Restaurant') }}</a>
-        <a href="/items" class="dropdown-item">{{ __('Menu') }}</a>
+        <a href="{{ route('admin.restaurants.edit', auth()->user()->restorant->id) }}" class="dropdown-item">{{ __('Mi Negocio') }}</a>
+        <a href="{{ route('paymentMethod.index')  }}" class="dropdown-item">{{ __('Payment Methods') }}</a>
+        <a href="/items" class="dropdown-item">{{ __('Productos') }}</a>
+
+
         @if(config('app.ordering')&&config('settings.enable_finances_owner'))
             <a href="{{ route('finances.owner') }}" class="dropdown-item">{{ __('Finances') }}</a>
         @endif
         @if(config('settings.enable_pricing'))
             <a href="{{ route('plans.current') }}" class="dropdown-item">{{ __('Plan') }}</a>
         @endif
+
+        <a href="{{ route('driver.employ.show') }}" class="dropdown-item">{{ __('Riders') }}</a>
+        <a href="{{ route('profile.edit') }}" class="dropdown-item">Mi cuenta</a>
+        <a href="{{ route('share.menu') }}" class="dropdown-item">{{ __('Share') }}</a>
+
+
     @endif
     @if(auth()->user()->hasRole('client'))
         <!--<a href="/linklist" class="dropdown-item">Listado de Links</a>-->
