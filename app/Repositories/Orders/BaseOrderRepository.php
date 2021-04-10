@@ -85,10 +85,10 @@ class BaseOrderRepository extends Controller
         $this->vendor = Vendor::findOrFail($vendor_id);
     }
 
-    
+
 
     public function constructOrder(){
-        //Create the order 
+        //Create the order
        $result=  $this->createOrder();
 
         //Set Items
@@ -127,6 +127,9 @@ class BaseOrderRepository extends Controller
     }
 
     private function createOrder(){
+
+        // dd('hola', $this->request->file);
+
         if($this->order==null){
             $this->order=new Order;
             $this->order->restorant_id=$this->vendor->id;
@@ -135,7 +138,7 @@ class BaseOrderRepository extends Controller
             $this->order->payment_status="unpaid";
 
             $expeditionsTypes=['delivery'=>1,'pickup'=>2,'dinein'=>3]; //1- delivery 2 - pickup 3-dinein
-            $this->order->delivery_method=$expeditionsTypes[$this->expedition];  
+            $this->order->delivery_method=$expeditionsTypes[$this->expedition];
 
             //Client
             if(auth()->user()){
@@ -146,6 +149,8 @@ class BaseOrderRepository extends Controller
             $this->order->order_price=0;
             $this->order->vatvalue=0;
 
+            // $this->order->file = $this->request->file('file')->getClientOriginalName();
+
             //Save order
             $this->order->save();
 
@@ -154,7 +159,7 @@ class BaseOrderRepository extends Controller
             $this->isNewOrder=false;
         }
     }
-    
+
     private function setItems(){
         /**
           "items":[{
@@ -166,13 +171,13 @@ class BaseOrderRepository extends Controller
          */
         foreach ($this->request->items as $key => $item) {
 
-            
+
             //Obtain the item
             $theItem = Items::findOrFail($item['id']);
 
             //List of extras
             $extras = [];
-            
+
             //The price of the item or variant
             $itemSelectedPrice = $theItem->price;
 
@@ -191,19 +196,19 @@ class BaseOrderRepository extends Controller
                 $itemSelectedPrice+=$theExtra->price;
                 array_push($extras, $theExtra->name.' + '.money($theExtra->price, config('settings.cashier_currency'), config('settings.do_convertion')));
             }
-            
+
             //Total vat on this item
             $totalCalculatedVAT = $item['qty'] * ($theItem->vat > 0?$itemSelectedPrice * ($theItem->vat / 100):0);
 
             $this->order->items()->attach($item['id'], [
-                'qty'=>$item['qty'], 
-                'extras'=>json_encode($extras), 
-                'vat'=>$theItem->vat, 
-                'vatvalue'=>$totalCalculatedVAT, 
-                'variant_name'=>$variantName, 
+                'qty'=>$item['qty'],
+                'extras'=>json_encode($extras),
+                'vat'=>$theItem->vat,
+                'vatvalue'=>$totalCalculatedVAT,
+                'variant_name'=>$variantName,
                 'variant_price'=>$itemSelectedPrice
             ]);
-        } 
+        }
 
 
         //After we have updated the list of items, we need to update the order price
@@ -221,7 +226,7 @@ class BaseOrderRepository extends Controller
     }
 
     private function setComment(){
-       
+
         $comment = $this->request->comment ? strip_tags($this->request->comment.'') : '';
         $this->order->comment = $this->order->comment.' '.$comment;
         $this->order->update();

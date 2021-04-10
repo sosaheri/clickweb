@@ -25,7 +25,7 @@
          <div class="pl-lg-4">
              <h3>{{ $order->client->name }}</h3>
              <h4>{{ $order->client->email }}</h4>
-            
+
               @if ($order->address)
              <a href="https://www.google.com/maps/place/{{$order->address->address }}">{{ $order->address->address }}</a><br>
               @endif
@@ -44,12 +44,12 @@
              @if(!empty($order->client->phone))
              <br/>
              <h4>{{ __('Contact')}}:</h4>
-                   <a href="tel:{{$order->client->phone}}">{{ $order->client->phone}} </a> 
+                   <a href="tel:{{$order->client->phone}}">{{ $order->client->phone}} </a>
              @endif
          </div>
          <hr class="my-4" />
-   
-        
+
+
      @endif
 <!--     <h6 class="heading-small text-muted mb-4">{{ __('Restaurant information') }}</h6>
      @include('partials.flash')
@@ -57,35 +57,35 @@
          <h3>{{ $order->restorant->name }}</h3>
           <a href="https://www.google.com/maps/place/{{$order->restorant->address}}">{{ $order->restorant->address }}</a><br>
 
-         <a href="tel:{{$order->restorant->phone}}">{{ $order->restorant->phone}} </a> 
-    
+         <a href="tel:{{$order->restorant->phone}}">{{ $order->restorant->phone}} </a>
+
          <h4>{{ $order->restorant->user->name.", ".$order->restorant->user->email }}</h4>
      </div>
      <hr class="my-4" /> -->
- 
- 
-     
- 
- 
-     
+
+
+
+
+
+
      <h6 class="heading-small text-muted mb-4">{{ __('Order') }}</h6>
-     <?php 
+     <?php
                  $currency=config('settings.cashier_currency');
                  $convert=config('settings.do_convertion');
              ?>
-  
-    
+
+
      <hr />
      @if(config('app.isft'))
          <h4>{{ __("Delivery method") }}: {{ $order->delivery_method==1?__('Delivery'):__('Pickup') }}</h4>
-       
+
      @else
          <h4>{{ __("Dine method") }}: {{ $order->delivery_method==3?__('Dine in'):__('Takeaway') }}</h4>
-    
+
      @endif
- 
- 
- </div>  
+
+
+ </div>
 
              <div id="accordion">
   <div class="card">
@@ -101,7 +101,7 @@
       <div class="card-body">
                  <ul id="order-items">
          @foreach($order->items as $item)
-             <?php 
+             <?php
                  $theItemPrice= ($item->pivot->variant_price?$item->pivot->variant_price:$item->price);
              ?>
              <li><h4>{{ $item->pivot->qty." X ".$item->name }} -  @money($theItemPrice, $currency,$convert)  =  ( @money( $item->pivot->qty*$theItemPrice, $currency,true) )
@@ -119,8 +119,8 @@
                                  @foreach ($item->options as $option)
                                      <th>{{ $option->name }}</th>
                                  @endforeach
- 
- 
+
+
                              </tr>
                          </thead>
                          <tbody class="list">
@@ -132,7 +132,7 @@
                          </tbody>
                      </table>
                  @endif
- 
+
                  @if (strlen($item->pivot->extras)>2)
                      <br /><span>{{ __('Extras') }}</span><br />
                      <ul>
@@ -157,7 +157,7 @@
      @hasrole('admin|driver|owner')
      <h5>{{ __("NET") }}: @money( $order->order_price-$order->vatvalue, $currency ,true)</h5>
      <h5>{{ __("VAT") }}: @money( $order->vatvalue, $currency,$convert)</h5>
- 
+
      @endif
      <h4>{{ __("Sub Total") }}: @money( $order->order_price, $currency,$convert)</h4>
      @if(config('app.isft'))
@@ -166,11 +166,16 @@
      <hr />
      <h3>{{ __("TOTAL") }}: @money( $order->delivery_price+$order->order_price, $currency,true)</h3>
      <hr />
-     <h4>{{ __("Payment method") }}: {{ __(strtoupper($order->payment_method)) }}</h4>
-     <h4>{{ __("Payment status") }}: {{ __(ucfirst($order->payment_status)) }}</h4>
-     @if ($order->payment_status=="unpaid"&&strlen($order->payment_link)>5)
-         <button onclick="location.href='{{$order->payment_link}}'" class="btn btn-success">{{ __('Pay now') }}</button>
+
+     @if($order->file )
+     <h4>Payment Support</h4>
+     <h4> <img src="{{ asset('storage/') }}/{{ $order->file }}" alt="" srcset=""> </h4>
      @endif
+     {{-- <h4>{{ __("Payment method") }}: {{ __(strtoupper($order->payment_method)) }}</h4>
+     <h4>{{ __("Payment status") }}: {{ __(ucfirst($order->payment_status)) }}</h4> --}}
+     {{-- @if ($order->payment_status=="unpaid"&&strlen($order->payment_link)>5)
+         <button onclick="location.href='{{$order->payment_link}}'" class="btn btn-success">{{ __('Pay now') }}</button>
+     @endif --}}
       </div>
     </div>
   </div>
@@ -188,14 +193,14 @@
                 </div>
             </div>
             <div class="col-xl-5  mb-5 mb-xl-0">
-          
+
                 <br/>
                 <div class="card card-profile shadow">
                     <div class="card-header">
                         <h5 class="h3 mb-0">{{ __("Status History")}}</h5>
                     </div>
                     @include('orders.partials.orderstatus')
-                    
+
                 </div>
                 @if(auth()->user()->hasRole('client'))
                 @if($order->status->pluck('alias')->last() == "delivered")
@@ -217,7 +222,7 @@
 @section('js')
 <!-- Google Map -->
 <script async defer src= "https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=<?php echo config('settings.google_maps_api_key'); ?>"> </script>
-  
+
 
     <script src="{{ asset('custom') }}/js/ratings.js"></script>
 @endsection

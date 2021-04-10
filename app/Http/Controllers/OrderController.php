@@ -561,6 +561,7 @@ class OrderController extends Controller
 
     public function store(Request $request){
 
+
         //Convert web request to mobile like request
         $mobileLikeRequest=$this->toMobileLike($request);
 
@@ -596,6 +597,15 @@ class OrderController extends Controller
             notify()->error($validatorOnMaking->errors()->first());
             return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
         }
+
+
+        $file = $request->file('file');
+        $nombre = $orderRepo->order->id . '-' . $file->getClientOriginalName();
+        \Storage::disk('public')->put($nombre, \File::get($file));
+
+        $o = Order::find($orderRepo->order->id );
+        $o->file = $nombre;
+        $o->update();
 
         return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
     }
