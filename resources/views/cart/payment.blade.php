@@ -41,14 +41,14 @@
 
                         @if(!config('settings.is_whatsapp_ordering_mode'))
                         <!-- COD -->
-                        @if (!config('settings.hide_cod'))
+                        {{-- @if (!config('settings.hide_cod'))
                             <div class="custom-control custom-radio mb-3">
                                 <input name="paymentType" class="custom-control-input cashOnDelivery" id="cashOnDelivery" type="radio" value="cod" {{ config('settings.default_payment')=="cod"?"checked":""}}>
                                 <label class="custom-control-label" for="cashOnDelivery"><span class="delTime">{{ config('app.isqrsaas')?__('Cash / Card Terminal'): __('Cash on delivery') }}</span> <span class="picTime">{{ __('Cash on pickup') }}</span></label>
                             </div>
-                        @endif
-                     
-                        @if($enablePayments)
+                        @endif --}}
+
+                        {{-- @if($enablePayments)
 
                             <!-- STIPE CART -->
                             @if (config('settings.stripe_key')&&config('settings.enable_stripe'))
@@ -82,20 +82,24 @@
                                 </div>
                             @endif
 
-                        @endif
+                        @endif --}}
 
                         @endif
 
                            <div class="form-group">
-                             <input name="timeslot" class="form-control" id="timeslot" type="text"  value="1050_1080"  style="visibility: hidden;">               
-         
+                             <input name="timeslot" class="form-control" id="timeslot" type="text"  value="1050_1080"  style="visibility: hidden;">
+
                           </div>
-                         
-                           <div class="form-group cashOnDeliveryReturn">
-                          
-                <input type="number" class="form-control " id="cashOnDeliveryReturn" name="cashOnDeliveryReturn" placeholder="denominacion del billete con el que piensa pagar">
-                <small class="text-muted"><strong>Asi asegurar el Cambio Apropiado</strong></small>
-            </div>
+
+                           {{-- <div class="form-group cashOnDeliveryReturn">
+
+                                <input type="number" class="form-control " id="cashOnDeliveryReturn" name="cashOnDeliveryReturn" placeholder="denominacion del billete con el que piensa pagar">
+                                <small class="text-muted"><strong>Asi asegurar el Cambio Apropiado</strong></small>
+                            </div> --}}
+
+                            <h4>Agregue su soporte de pago</h4>
+                    <input type="file" name="file" id="file">
+
                     </div>
                 </div>
             </div>
@@ -129,7 +133,7 @@
             <!-- Stripe -->
             @include('cart.payments.stripe')
 
-            
+
 
         @elseif(config('settings.is_whatsapp_ordering_mode'))
             @include('cart.payments.whatsapp')

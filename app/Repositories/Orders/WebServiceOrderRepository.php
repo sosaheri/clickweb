@@ -29,11 +29,11 @@ class WebServiceOrderRepository extends BaseOrderRepository implements OrderType
         //From trait - set fee and time slot
         $this->setAddressAndApplyDeliveryFee();
         $this->setTimeSlot();
-       
+
         //From parent - check if order is ok - min price etc.
         $resultFromValidateOrder=$this->validateOrder();
         if($resultFromValidateOrder->fails()){return $resultFromValidateOrder;}
-        
+
         //From trait - make attempt to pay order or get payment link
         $resultFromPayOrder=$this->payOrder();
         if($resultFromPayOrder->fails()){return $resultFromPayOrder;}
@@ -44,16 +44,16 @@ class WebServiceOrderRepository extends BaseOrderRepository implements OrderType
 
          //Local - clear cart
          $this->clearCart();
-     
+
          //Local - Notify
          // $this->notify();
-          
+
         //At the end, return that all went ok
         return Validator::make([], []);
     }
 
 
-    
+
     public function setInitialStatus(){
         //Set the just created status
         $this->order->status()->attach(1, ['user_id'=>auth()->user()->id, 'comment'=>'']);
@@ -69,7 +69,7 @@ class WebServiceOrderRepository extends BaseOrderRepository implements OrderType
 
                 $flight = Order::findOrFail($this->order->id);
 
-               $flight->payback= $pay;
+            //    $flight->payback= $pay;
 
               $flight->save();
             //Success - redirect to success or to pay page
@@ -82,7 +82,7 @@ class WebServiceOrderRepository extends BaseOrderRepository implements OrderType
 
     public function redirectOrInform(){
         if($this->status){
-        
+
             //Success - redirect to success or to pay page
             return $this->paymentRedirect==null?redirect()->route('order.success', ['order' => $this->order]):redirect($this->paymentRedirect);
         }else{
