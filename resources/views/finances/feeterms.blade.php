@@ -184,7 +184,8 @@
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-body px-lg-5 py-lg-5">
 
-                                <img src="{{ asset('') }}dash.jpg" alt="">
+                                <img width="400px" src="{{ asset('') }}dash.jpg" alt="">
+                                <br>
                                 <p>dash:XnLvTkTaHx5hKss9k3UXG5giYLtugqHX1d?amount=0.09419314</p>
 
                         </div>
