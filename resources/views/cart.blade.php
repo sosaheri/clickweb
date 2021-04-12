@@ -50,7 +50,7 @@
                     @else
 
                       <!-- QRSAAS -->
-                      
+
                       <!-- DINE IN OR TAKEAWAY -->
                       @if (config('settings.enable_pickup'))
                           @include('cart.localorder.dineiintakeaway')
@@ -69,7 +69,7 @@
 
                       <!-- Comment -->
                       @include('cart.comment')
-                        
+
 
                     @endif
                 @else
@@ -101,18 +101,18 @@
           <!-- Right Part -->
           <div class="col-md-5">
 
-            @if (count($timeSlots)>0)
+            {{-- @if (count($timeSlots)>0) --}}
                 <!-- Payment -->
                 @include('cart.payment')
                 <!--
                   <br/>
                   @include('cart.coupons')
                 -->
-               
-            @else
+
+            {{-- @else --}}
                 <!-- Closed restaurant -->
                 @include('cart.closed')
-            @endif
+            {{-- @endif --}}
 
 
           </div>
