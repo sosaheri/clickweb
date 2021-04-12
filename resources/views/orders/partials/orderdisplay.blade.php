@@ -5,13 +5,13 @@
             <th scope="col">{{ __('Restaurant') }}</th>
         @endif
         <th class="table-web" scope="col">Fecha</th>
-     
 
-      
+
+
         @hasrole('admin|owner|driver')
             <th class="table-web" scope="col">Cliente</th>
         @endif
-    
+
         @if(auth()->user()->hasRole('owner')|auth()->user()->hasRole('client'))
             <th class="table-web" scope="col">Producto</th>
             <th class="table-web" scope="col">{{ __('Price') }}</th>
@@ -20,18 +20,18 @@
             <th class="table-web" scope="col">Repartidor</th>
         @endif
           <th scope="col"> Último estado  </th>
-      
-   
+
+
          @if(auth()->user()->hasRole('admin') || auth()->user()->hasRole('owner') || auth()->user()->hasRole('driver'))
             <th scope="col">{{ __('Actions') }}</th>
-        @endif -->
+        @endif
     </tr>
 </thead>
 <tbody>
 @foreach($orders as $order)
 <tr>
     <td>
-        
+
         <a class="btn badge badge-success badge-pill" href="{{ route('orders.show',$order->id )}}">#{{ $order->id }}</a>
     </td>
     @hasrole('admin|driver')
@@ -51,13 +51,13 @@
         {{ $order->created_at->format(config('settings.datetime_display_format')) }}
     </td>
 
-   
+
     @hasrole('admin|owner|driver')
     <td class="table-web">
        {{ $order->client->name }}
     </td>
     @endif
- 
+
     @if(auth()->user()->hasRole('owner')|auth()->user()->hasRole('client'))
         <td class="table-web">
             {{ count($order->items) }}
@@ -74,8 +74,8 @@
      <td>
         @include('orders.partials.laststatus')
     </td>
- 
-     @include('orders.partials.actions.table',['order' => $order ]) 
+
+     @include('orders.partials.actions.table',['order' => $order ])
 </tr>
 @endforeach
 </tbody>
