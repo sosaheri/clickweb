@@ -111,7 +111,7 @@
 
             {{-- @else --}}
                 <!-- Closed restaurant -->
-                @include('cart.closed')
+                {{-- @include('cart.closed') --}}
             {{-- @endif --}}
 
 
