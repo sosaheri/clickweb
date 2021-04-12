@@ -1,4 +1,4 @@
-<div class="card card-profile bg-secondary shadow">
+{{-- <div class="card card-profile bg-secondary shadow">
     <div class="card-header">
         <h5 class="h3 mb-0">{{ __("Working Hours")}}</h5>
     </div>
@@ -43,4 +43,4 @@
             </div>
         </form>
     </div>
-</div>
+</div> --}}
