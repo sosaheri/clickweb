@@ -32,7 +32,7 @@
             <div class="col">
                 <!-- Order Card -->
                <!--  @include('orders.partials.ordercard',['financialReport'=>true]) -->
-               <h2>Planes</h2>
+               <h2>Pago efectivo</h2>
             </div>
               <div class="col">
 
@@ -40,24 +40,11 @@
         </div>
        <div class="row">
 
-           <div>
-            Plan Estandar:  Si tu negocio no tiene más 15 pedido siguiente mes es GRATIS<br>
-           El costo mensual del servicio es de 20$<br><br>
 
-
-           </div>
 
        </div>
 
-       <div>
-                      Formas de pago:<br>
-          <ul>
-               <li>Dash</li>
-               <li>Paypal</li>
-               <li>Efectivo</li>
-               <li>Pago efectivo</li>
-           </ul>
-       </div>
+
 
        <div>
 
