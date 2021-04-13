@@ -1,7 +1,7 @@
-@extends('layouts.app', ['title' => __('Drivers Management')])
+@extends('layouts.app', ['title' => __('Riders Management')])
 
 @section('content')
-    @include('drivers.partials.header', ['title' => __('Edit Driver')])
+    @include('drivers.partials.header', ['title' => __('Edit Riders')])
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -12,7 +12,14 @@
                             <div class="col-8">
                                 <h3 class="mb-0">{{ __('Driver Management') }}</h3>
                             </div>
+
+
                             <div class="col-4 text-right">
+                                <form method="post">@csrf @method("delete")
+                                    <a href="{{ route('drivers.destroy' , $driver->id ) }}" class="btn btn-sm btn-danger">{{ __('Delete') }}</a>
+                                </form>
+                                <br>
+
                                 <a href="{{ route('drivers.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                             </div>
                         </div>

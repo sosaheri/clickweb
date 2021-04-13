@@ -35,13 +35,13 @@
         "akaunting/money": "^1.1",
         "biscolab/laravel-recaptcha": "^5.0",
         "codedge/laravel-selfupdater": "@dev",
-        "joedixon/laravel-translation": "@dev",
         "darryldecode/cart": "~4.0",
         "doctrine/dbal": "^2.11",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
+        "joedixon/laravel-translation": "@dev",
         "kkomelin/laravel-translatable-string-exporter": "^1.10",
         "laravel-frontend-presets/argon": "^1.0",
         "laravel-notification-channels/onesignal": "^2.3",
@@ -70,7 +70,8 @@
         "stripe/stripe-php": "^7.60",
         "twilio/sdk": "^6.11",
         "unicodeveloper/laravel-paystack": "^1.0",
-        "willvincent/laravel-rateable": "2.3.0"
+        "willvincent/laravel-rateable": "2.3.0",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

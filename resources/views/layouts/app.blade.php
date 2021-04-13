@@ -40,6 +40,13 @@
         <!-- Range datepicker -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
+
+        {{-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> --}}
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.0.3/css/dataTables.dateTime.min.css">
+
+
+
         @yield('head')
         @laravelPWA
 
@@ -109,7 +116,7 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
         <!-- All in one -->
-        <script src="{{ asset('custom') }}/js/js.js?id={{ config('config.version')}}"></script>
+        {{-- <script src="{{ asset('custom') }}/js/js.js?id={{ config('config.version')}}"></script> --}}
 
 
 
@@ -153,15 +160,122 @@
 
         @endif
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
-                            <script type="text/javascript">
+{{-- <script src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"></script> --}}
+{{-- <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script> --}}
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 
-                            const element = document.querySelector('.livesearch');
-                            const choices = new Choices(element);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdn.datatables.net/datetime/1.0.3/js/dataTables.dateTime.min.js"></script>
 
 
-                            </script> --}}
+
+
+@php
+    $driversEdit = url("/drivers/");
+@endphp
+
+
+                        <script type="text/javascript">
+
+                                var minDate, maxDate;
+
+                                $.fn.dataTable.ext.search.push(
+                                    function( settings, data, dataIndex ) {
+                                        var min = minDate.val();
+                                        var max = maxDate.val();
+                                        var date = new Date( data[2] );
+
+
+
+
+                                        if (
+                                            ( min === null && max === null ) ||
+                                            ( min === null && date <= max ) ||
+                                            ( min <= date   && max === null ) ||
+                                            ( min <= date   && date <= max )
+                                        ) {
+                                            return true;
+                                        }
+                                        return false;
+                                    }
+                                );
+
+
+
+                             $(document).ready(function() {
+                                  // Create date inputs
+                                minDate = new DateTime($('#min'), {
+                                    format: 'MMMM Do YYYY'
+                                });
+
+
+                                maxDate = new DateTime($('#max'), {
+                                    format: 'MMMM Do YYYY'
+                                });
+
+
+
+                                oTable = $('#drivers_table').DataTable({
+                                    "processing": true,
+                                    "serverSide": true,
+                                    "ajax": "{{ route('datatable.drivers') }}",
+                                    "columns": [
+                                        {orderable: true, data: 'name', name: 'name'},
+                                        {orderable: true, data: 'email', name: 'email'},
+                                        {data: 'created_at', name: 'created_at'},
+                                        {
+                                            orderable: false,
+                                            data: null,
+                                            render: function (data, type, row) {
+                                                return '<button onclick=\'window.location="{{ $driversEdit }}/'+ row.id + '/edit'+ '"\' class="btn btn-info btn-sm"></i><span>Ver</span></button>'
+                                            }
+                                        }
+
+                                    ],
+                                    "responsive": true,
+                                    "language": {
+                                        "sProcessing":    "Procesando...",
+                                        "sLengthMenu":    "Mostrar _MENU_ registros",
+                                        "sZeroRecords":   "No se encontraron resultados",
+                                        "sEmptyTable":    "Ningún dato disponible en esta tabla",
+                                        "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                                        "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
+                                        "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+                                        "sInfoPostFix":   "",
+                                        "sSearch":        "Filtra por cualquier campo:",
+                                        "sUrl":           "",
+                                        "sInfoThousands":  ",",
+                                        "sLoadingRecords": "Cargando...",
+                                        "oPaginate": {
+                                            "sFirst":    "Primero",
+                                            "sLast":    "Último",
+                                            "sNext":    "Siguiente",
+                                            "sPrevious": "Anterior"
+                                        },
+                                        "oAria": {
+                                            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                                        }
+                                    },
+                                    "bLengthChange": true,
+
+                                })
+                                .columns.adjust();
+
+
+                                // Refilter the table
+                                $('#min, #max').on('change', function () {
+                                    oTable.draw();
+                                });
+
+
+                            });
+
+                        </script>
+
+
+
 
 
         <!-- Custom JS defined by admin -->

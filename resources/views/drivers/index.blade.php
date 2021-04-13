@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => __('Drivers')])
+@extends('layouts.app', ['title' => __('Riders')])
 
 @section('content')
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
@@ -11,10 +11,10 @@
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Drivers') }}</h3>
+                                <h3 class="mb-0">{{ __('Riders') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('drivers.create') }}" class="btn btn-sm btn-primary">{{ __('Add driver') }}</a>
+                                <a href="{{ route('drivers.create') }}" class="btn btn-sm btn-primary">{{ __('Agregar rider') }}</a>
                             </div>
                         </div>
                     </div>
@@ -23,8 +23,42 @@
                         @include('partials.flash')
                     </div>
 
-                    <div class="table-responsive">
-                        <table class="table align-items-center table-flush">
+                    <div class="container">
+
+                        <table border="0" cellspacing="5" cellpadding="5">
+                            <tbody><tr>
+                                <td>Fecha minima:</td>
+                                <td><input type="text" id="min" name="min"></td>
+                            </tr>
+                            <tr>
+                                <td>Fecha máxima:</td>
+                                <td><input type="text" id="max" name="max"></td>
+                            </tr>
+                        </tbody></table>
+                        <br>
+
+                        <table id="drivers_table" class="table table-hover table-condensed">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">{{ __('Name') }}</th>
+                                    <th scope="col">{{ __('Email') }}</th>
+                                    <th scope="col">{{ __('Creation Date') }}</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+
+
+
+                        {{-- <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">{{ __('Name') }}</th>
@@ -53,10 +87,9 @@
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
                                                         <form action="{{ route('drivers.destroy', $driver) }}" method="post">
-                                                            @csrf
-                                                            @method('delete')
+                                                            @csrf @method('delete')
 
-                                                            
+
                                                             <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">
                                                                 {{ __('Deactivate') }}
                                                             </button>
@@ -68,13 +101,13 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </table> --}}
                     </div>
-                    <div class="card-footer py-4">
+                    {{-- <div class="card-footer py-4">
                         <nav class="d-flex justify-content-end" aria-label="...">
                             {{ $drivers->links() }}
                         </nav>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

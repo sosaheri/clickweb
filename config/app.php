@@ -202,6 +202,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         JoeDixon\Translation\TranslationServiceProvider::class,
         Biscolab\ReCaptcha\ReCaptchaServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+
 
         /*
          * Package Service Providers...

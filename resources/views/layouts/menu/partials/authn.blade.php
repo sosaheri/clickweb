@@ -21,7 +21,7 @@
         @if(config('settings.multi_city'))
             <a href="{{ route('cities.index') }}" class="dropdown-item">{{ __('Cities') }}</a>
         @endif
-        <a href="/drivers" class="dropdown-item">{{ __('Drivers') }}</a>
+        <a href="/drivers" class="dropdown-item">{{ __('Riders') }}</a>
         <a href="/clients" class="dropdown-item">{{ __('Clients') }}</a>
         <a href="/pages" class="dropdown-item">{{ __('Pages') }}</a>
         @if(config('settings.enable_pricing'))

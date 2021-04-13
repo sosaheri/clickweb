@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
+use Yajra\Datatables\Datatables;
+
 
 class DriverController extends Controller
 {
@@ -55,10 +57,23 @@ class DriverController extends Controller
     public function index()
     {
         if (auth()->user()->hasRole('admin')) {
-            return view('drivers.index', ['drivers' =>User::role('driver')->where(['active'=>1])->paginate(15)]);
+
+            return view('drivers.index');
+
+            // return view('drivers.index', ['drivers' =>User::role('driver')->where(['active'=>1])->paginate(15)]);
         } else {
             return redirect()->route('orders.index')->withStatus(__('No Access'));
         }
+    }
+
+    public function getDrivers(){
+
+        $data = User::select(['id', 'name','email','created_at','active'])->role('driver')->where(['active'=>1]);
+
+        return Datatables::of($data)->editColumn('created_at', function ($request) {
+                return $request->created_at->toDayDateTimeString();
+            })->make(true);
+
     }
 
     /**
