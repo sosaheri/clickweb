@@ -133,6 +133,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/reviewsdelete/{rating}', 'ReviewsController@destroy')->name('reviews.destroyget');
 
     Route::resource('drivers', 'DriverController');
+    Route::get('/getdrivers', 'DriverController@getDrivers')->name('datatable.drivers');
+    
     Route::resource('clients', 'ClientController');
     Route::resource('orders', 'OrderController');
     Route::get('/home', 'OrderController@dashboard')->name('home');
