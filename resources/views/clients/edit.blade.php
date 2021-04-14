@@ -13,6 +13,19 @@
                                 <h3 class="mb-0">{{ __('Client Management') }}</h3>
                             </div>
                             <div class="col-4 text-right">
+
+                                <form method="post">
+                                      @csrf
+                                       @method("delete")
+
+                                       <button onclick=window.location="{{ route('clients.destroy', $client->id) }}" class="btn btn-sm btn-danger btn-sm">
+                                            <span>{{ __('Delete') }}
+                                            </span>
+                                        </button>
+                                    {{-- <a href="{{ route('clients.destroy' , $client->id ) }}" class="btn btn-sm btn-danger">{{ __('Delete') }}</a> --}}
+                                </form>
+                                <br>
+
                                 <a href="{{ route('clients.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
                             </div>
                         </div>

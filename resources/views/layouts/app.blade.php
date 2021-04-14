@@ -170,24 +170,51 @@
 
 
 
-
-@php
-    $driversEdit = url("/drivers/");
-@endphp
-
-
                         <script type="text/javascript">
 
-                                var minDate, maxDate;
+                                var minDate, maxDate, cminDate, cmaxDate;
 
                                 $.fn.dataTable.ext.search.push(
                                     function( settings, data, dataIndex ) {
                                         var min = minDate.val();
                                         var max = maxDate.val();
-                                        var date = new Date( data[2] );
+                                        var date = new Date( data[2]) || 0;
 
+                                        if (
+                                            ( min === null && max === null ) ||
+                                            ( min === null && date <= max ) ||
+                                            ( min <= date   && max === null ) ||
+                                            ( min <= date   && date <= max )
+                                        ) {
+                                            return true;
+                                        }
+                                        return false;
+                                    }
+                                );
 
+                                $.fn.dataTable.ext.search.push(
+                                    function( settings, data, dataIndex ) {
+                                        var min = cminDate.val();
+                                        var max = cmaxDate.val();
+                                        var date = new Date( data[3]) || 0;
 
+                                        if (
+                                            ( min === null && max === null ) ||
+                                            ( min === null && date <= max ) ||
+                                            ( min <= date   && max === null ) ||
+                                            ( min <= date   && date <= max )
+                                        ) {
+                                            return true;
+                                        }
+                                        return false;
+                                    }
+                                );
+
+                                $.fn.dataTable.ext.search.push(
+                                    function( settings, data, dataIndex ) {
+                                        var min = rminDate.val();
+                                        var max = rmaxDate.val();
+                                        var date = new Date( data[2]) || 0;
 
                                         if (
                                             ( min === null && max === null ) ||
@@ -209,16 +236,30 @@
                                     format: 'MMMM Do YYYY'
                                 });
 
-
                                 maxDate = new DateTime($('#max'), {
                                     format: 'MMMM Do YYYY'
                                 });
 
+                                cminDate = new DateTime($('#cmin'), {
+                                    format: 'MMMM Do YYYY'
+                                });
+
+                                cmaxDate = new DateTime($('#cmax'), {
+                                    format: 'MMMM Do YYYY'
+                                });
 
 
-                                oTable = $('#drivers_table').DataTable({
+                                rminDate = new DateTime($('#rmin'), {
+                                    format: 'MMMM Do YYYY'
+                                });
+
+                                rmaxDate = new DateTime($('#rmax'), {
+                                    format: 'MMMM Do YYYY'
+                                });
+
+                                dTable = $('#drivers_table').DataTable({
                                     "processing": true,
-                                    "serverSide": true,
+                                    "serverSide": false,
                                     "ajax": "{{ route('datatable.drivers') }}",
                                     "columns": [
                                         {orderable: true, data: 'name', name: 'name'},
@@ -228,7 +269,7 @@
                                             orderable: false,
                                             data: null,
                                             render: function (data, type, row) {
-                                                return '<button onclick=\'window.location="{{ $driversEdit }}/'+ row.id + '/edit'+ '"\' class="btn btn-info btn-sm"></i><span>Ver</span></button>'
+                                                return '<button onclick=\'window.location="{{ url("/drivers/") }}/'+ row.id + '/edit'+ '"\' class="btn btn-info btn-sm"></i><span>Ver</span></button>'
                                             }
                                         }
 
@@ -263,10 +304,129 @@
                                 })
                                 .columns.adjust();
 
+                                cTable = $('#clients_table').DataTable({
+                                    "processing": true,
+                                    "serverSide": false,
+                                    "ajax": "{{ route('datatable.clients') }}",
+                                    "columns": [
+                                        {orderable: true, data: 'name', name: 'name'},
+                                        {orderable: true, data: 'name', name: 'name'},
+                                        {orderable: true, data: 'email', name: 'email'},
+                                        {data: 'created_at', name: 'created_at'},
+                                        {
+                                            orderable: false,
+                                            data: null,
+                                            render: function (data, type, row) {
+                                                return '<button onclick=\'window.location="{{ url("/clients/") }}/'+ row.id + '/edit'+ '"\' class="btn btn-info btn-sm"></i><span>Ver</span></button>'
+                                            }
+                                        }
+
+                                    ],
+                                    "responsive": true,
+                                    "language": {
+                                        "sProcessing":    "Procesando...",
+                                        "sLengthMenu":    "Mostrar _MENU_ registros",
+                                        "sZeroRecords":   "No se encontraron resultados",
+                                        "sEmptyTable":    "Ningún dato disponible en esta tabla",
+                                        "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                                        "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
+                                        "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+                                        "sInfoPostFix":   "",
+                                        "sSearch":        "Filtra por cualquier campo:",
+                                        "sUrl":           "",
+                                        "sInfoThousands":  ",",
+                                        "sLoadingRecords": "Cargando...",
+                                        "oPaginate": {
+                                            "sFirst":    "Primero",
+                                            "sLast":    "Último",
+                                            "sNext":    "Siguiente",
+                                            "sPrevious": "Anterior"
+                                        },
+                                        "oAria": {
+                                            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                                        }
+                                    },
+                                    "bLengthChange": true,
+
+                                })
+                                .columns.adjust();
+
+                                rTable = $('#restaurants_table').DataTable({
+                                    "processing": true,
+                                    "serverSide": false,
+                                    "ajax": "{{ route('datatable.restaurant') }}",
+                                    "columns": [
+                                        {orderable: true, data: 'name', name: 'name'},
+                                        {
+                                            orderable: false,
+                                            data: null,
+                                            render: function (data, type, row) {
+                                                return '<img class="rounded" src="' + row.icon +'" width="50px" height="50px"></img>'
+
+                                            }
+                                        },
+                                        {data: 'created_at', name: 'created_at'},
+                                        {
+                                            orderable: false,
+                                            data: null,
+                                            render: function (data, type, row) {
+                                                return 'status'
+                                            }
+                                        },
+                                        {
+                                            orderable: false,
+                                            data: null,
+                                            render: function (data, type, row) {
+                                                return '<button onclick=\'window.location="{{ url("/restaurants/") }}/'+ row.id + '/edit'+ '"\' class="btn btn-info btn-sm"></i><span>Ver</span></button>'
+                                            }
+                                        }
+
+
+
+
+                                    ],
+                                    "responsive": true,
+                                    "language": {
+                                        "sProcessing":    "Procesando...",
+                                        "sLengthMenu":    "Mostrar _MENU_ registros",
+                                        "sZeroRecords":   "No se encontraron resultados",
+                                        "sEmptyTable":    "Ningún dato disponible en esta tabla",
+                                        "sInfo":          "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                                        "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
+                                        "sInfoFiltered":  "(filtrado de un total de _MAX_ registros)",
+                                        "sInfoPostFix":   "",
+                                        "sSearch":        "Filtra por cualquier campo:",
+                                        "sUrl":           "",
+                                        "sInfoThousands":  ",",
+                                        "sLoadingRecords": "Cargando...",
+                                        "oPaginate": {
+                                            "sFirst":    "Primero",
+                                            "sLast":    "Último",
+                                            "sNext":    "Siguiente",
+                                            "sPrevious": "Anterior"
+                                        },
+                                        "oAria": {
+                                            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                                            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                                        }
+                                    },
+                                    "bLengthChange": true,
+
+                                })
+                                .columns.adjust();
 
                                 // Refilter the table
                                 $('#min, #max').on('change', function () {
-                                    oTable.draw();
+                                    dTable.draw();
+                                });
+
+                                $('#cmin, #cmax').on('change', function () {
+                                    cTable.draw();
+                                });
+
+                                $('#rmin, #rmax').on('change', function () {
+                                    rTable.draw();
                                 });
 
 

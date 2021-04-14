@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
+
 
 class ClientController extends Controller
 {
@@ -15,13 +17,35 @@ class ClientController extends Controller
     public function index()
     {
         if (auth()->user()->hasRole('admin')) {
-            return view('clients.index', [
-                    'clients' => User::role('client')->where(['active'=>1])->paginate(15),
-                ]
-            );
+
+            return view('clients.index');
+
+            // return view('clients.index', [
+            //         'clients' => User::role('client')->where(['active'=>1])->paginate(15),
+            //     ]
+            // );
         } else {
             return redirect()->route('orders.index')->withStatus(__('No Access'));
         }
+    }
+
+
+    public function getClients(){
+
+        // $data = User::select(['id', 'name','email','created_at','active'])->role('client')->where(['active'=>1]);
+
+        $query = User::query();
+        $query = $query->where(['active' => 1]);
+        $query = $query->role('client');
+
+        // add more wheres as needed
+        $data = $query->get();
+
+
+        return Datatables::of($data)->editColumn('created_at', function ($request) {
+                return $request->created_at->toDayDateTimeString();
+            })->make(true);
+
     }
 
     /**
@@ -93,6 +117,8 @@ class ClientController extends Controller
     {
         $client->active = 0;
         $client->save();
+
+        dd($client);
 
         return redirect()->route('clients.index')->withStatus(__('Client successfully deleted.'));
     }

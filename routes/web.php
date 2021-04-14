@@ -41,10 +41,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('user', 'UserController', ['except' => ['show']]);
     Route::post('/user/push', 'UserController@checkPushNotificationId');
 
+
+    Route::get('/getrestaurants', 'RestorantController@getRestorants')->name('datatable.restaurant');
+
     Route::name('admin.')->group(function () {
         Route::get('syncV1UsersToAuth0', 'SettingsController@syncV1UsersToAuth0')->name('syncV1UsersToAuth0');
         Route::get('dontsyncV1UsersToAuth0', 'SettingsController@dontsyncV1UsersToAuth0')->name('dontsyncV1UsersToAuth0');
         Route::resource('restaurants', 'RestorantController');
+
 
         Route::get('restaurants/loginas/{restaurant}', 'RestorantController@loginas')->name('restaurants.loginas');
 
@@ -134,8 +138,11 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('drivers', 'DriverController');
     Route::get('/getdrivers', 'DriverController@getDrivers')->name('datatable.drivers');
-    
+
     Route::resource('clients', 'ClientController');
+    Route::get('/getclients', 'ClientController@getClients')->name('datatable.clients');
+
+
     Route::resource('orders', 'OrderController');
     Route::get('/home', 'OrderController@dashboard')->name('home');
      Route::get('/index', 'OrderController@index')->name('index');

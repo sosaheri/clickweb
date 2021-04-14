@@ -15,7 +15,9 @@
 
 
                             <div class="col-4 text-right">
-                                <form method="post">@csrf @method("delete")
+                                <form method="post">
+                                    @csrf
+                                    @method("delete")
                                     <a href="{{ route('drivers.destroy' , $driver->id ) }}" class="btn btn-sm btn-danger">{{ __('Delete') }}</a>
                                 </form>
                                 <br>

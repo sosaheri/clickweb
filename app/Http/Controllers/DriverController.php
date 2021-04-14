@@ -68,10 +68,17 @@ class DriverController extends Controller
 
     public function getDrivers(){
 
-        $data = User::select(['id', 'name','email','created_at','active'])->role('driver')->where(['active'=>1]);
+    //   $data = User::select(['id', 'name','email','created_at','active'])->role('driver')->where(['active'=>1]);
+
+        $query = User::query();
+        $query = $query->where(['active'=>1]);
+        $query = $query->role('driver');
+
+        // add more wheres as needed
+        $data = $query->get();
 
         return Datatables::of($data)->editColumn('created_at', function ($request) {
-                return $request->created_at->toDayDateTimeString();
+                return $request->created_at->toDateTimeString();
             })->make(true);
 
     }

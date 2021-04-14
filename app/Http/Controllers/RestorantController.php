@@ -32,6 +32,8 @@ use Illuminate\Support\Str;
 use Image;
 use Maatwebsite\Excel\Facades\Excel;
 use Spatie\Permission\Models\Role;
+use Yajra\Datatables\Datatables;
+
 
 class RestorantController extends Controller
 {
@@ -54,10 +56,27 @@ class RestorantController extends Controller
     {
         if (auth()->user()->hasRole('admin')) {
             //return view('restorants.index', ['restorants' => $restaurants->where(['active'=>1])->paginate(10)]);
-            return view('restorants.index', ['restorants' => $restaurants->orderBy('id', 'desc')->paginate(10)]);
+            // return view('restorants.index', ['restorants' => $restaurants->orderBy('id', 'desc')->paginate(10)]);
+            return view('restorants.index' );
+
         } else {
+
             return redirect()->route('orders.index')->withStatus(__('No Access'));
         }
+    }
+
+    public function getRestorants(){
+
+        $query = Restorant::query();
+        $query = $query->where(['active' => 1]);
+
+        // add more wheres as needed
+        $data = $query->get();
+
+        return Datatables::of($data)->editColumn('created_at', function ($request) {
+                return $request->created_at->toDayDateTimeString();
+            })->make(true);
+
     }
 
     public function loginas(Restorant $restaurant)
@@ -111,7 +130,7 @@ class RestorantController extends Controller
         $owner->api_token = Str::random(80);
 
         $owner->password = Hash::make($generatedPassword);
-        
+
          $owner->save();
 
         //Assign role
@@ -130,7 +149,7 @@ class RestorantController extends Controller
         $restaurant->subdomain = $this->makeAlias(strip_tags($request->name));
         //$restaurant->logo = "";
          $restaurant->save();
-         
+
         //Send email to the user/owner
         $owner->notify(new RestaurantCreated($generatedPassword, $restaurant, $owner));
 
@@ -164,7 +183,7 @@ class RestorantController extends Controller
        Log::emergency("llogo");
  Log::emergency($restaurant->id);
   Log::emergency(auth()->user()->id );
- 
+
         //Generate days columns
         $hoursRange = [];
         for ($i = 0; $i < 7; $i++) {
@@ -193,7 +212,7 @@ class RestorantController extends Controller
             $currency=config('settings.cashier_currency');
         }
 
-       
+
 
         if (auth()->user()->id == $restaurant->user_id || auth()->user()->hasRole('admin')) {
             //return view('restorants.edit', compact('restorant'));
@@ -253,7 +272,7 @@ class RestorantController extends Controller
             $currency=config('settings.cashier_currency');
         }
 
-       
+
 
         if (auth()->user()->id == $restaurant->user_id || auth()->user()->hasRole('admin')) {
             //return view('restorants.edit', compact('restorant'));
@@ -284,7 +303,7 @@ class RestorantController extends Controller
         $restaurant->name = strip_tags($request->name);
         $restaurant->address = strip_tags($request->address);
         $restaurant->phone = strip_tags($request->phone);
-        
+
         $restaurant->description = strip_tags($request->description);
         $restaurant->minimum = strip_tags($request->minimum);
         $restaurant->fee = $request->fee ? $request->fee : 0;
@@ -350,7 +369,7 @@ class RestorantController extends Controller
             $newDefault->default=1;
             $newDefault->update();
         }
-        
+
 
         //Change currency
         $restaurant->currency=$request->currency;
@@ -362,7 +381,7 @@ class RestorantController extends Controller
 
         if (auth()->user()->hasRole('admin')) {
             return redirect()->route('admin.restaurants.edit', ['restaurant' => $restaurant->id])->withStatus(__('Restaurant successfully updated.'));
-        } 
+        }
 
         elseif (auth()->user()->hasRole('services')) {
                  return redirect()->route('service.edit', ['restaurant' => $restaurant->id])->withStatus("Exito");
@@ -542,13 +561,13 @@ class RestorantController extends Controller
         $owner->email = strip_tags($request->email_owner);
         $owner->phone = strip_tags($request->phone_owner) | '';
         $owner->active = 0;
-       
+
         $owner->api_token = Str::random(80);
 
         $owner->password = Hash::make($request->password);
        $owner->save();
        //Log::emergency($owner);
- 
+
         //Assign role
         $owner->assignRole('owner');
 

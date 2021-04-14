@@ -20,8 +20,43 @@
                         @include('partials.flash')
                     </div>
 
-                    <div class="table-responsive">
-                        <table class="table align-items-center table-flush">
+                    <div class="container">
+                         <table border="0" cellspacing="5" cellpadding="5">
+                            <tbody><tr>
+                                <td>Fecha minima:</td>
+                                <td><input type="text" id="cmin" name="cmin"></td>
+                            </tr>
+                            <tr>
+                                <td>Fecha máxima:</td>
+                                <td><input type="text" id="cmax" name="cmax"></td>
+                            </tr>
+                        </tbody></table>
+                        <br>
+
+                        <table id="clients_table" class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">{{ __('Name') }}</th>
+                                    <th scope="col">{{ __('Owner') }}</th>
+                                    <th scope="col">{{ __('Owner email') }}</th>
+                                    <th scope="col">{{ __('Creation Date') }}</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                    </tr>
+                            </tbody>
+                        </table>
+
+
+                        {{-- <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">{{ __('Name') }}</th>
@@ -67,13 +102,13 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </table> --}}
                     </div>
-                    <div class="card-footer py-4">
+                    {{-- <div class="card-footer py-4">
                         <nav class="d-flex justify-content-end" aria-label="...">
                             {{ $clients->links() }}
                         </nav>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
