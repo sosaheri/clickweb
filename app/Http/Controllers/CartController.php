@@ -178,7 +178,7 @@ class CartController extends Controller
         }else{
             //Cart is empty
             if(config('app.isft')) {
-                return redirect()->route('front')->withError('Your cart is empty!');
+                return redirect()->route('front')->withError('Your Actualizar Carrito!');
             }else{
                 $previousOrders = Cookie::get('orders') ? Cookie::get('orders') : '';
                 $previousOrderArray = array_filter(explode(',', $previousOrders));
@@ -199,10 +199,10 @@ class CartController extends Controller
                             'showLanguagesSelector'=>$restorantInfo['showLanguagesSelector'],
                             'hasGuestOrders'=>$restorantInfo['hasGuestOrders'],
                             'fields'=>$restorantInfo['fields'],
-                        ])->withError(__('Your cart is empty!'));
+                        ])->withError(__('Your Actualizar Carrito!'));
                     }
                 }else{
-                    return redirect()->route('front')->withError('Your cart is empty!');
+                    return redirect()->route('front')->withError('Actualizar Carrito!');
                 }
             }
         }

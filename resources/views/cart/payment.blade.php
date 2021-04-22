@@ -41,12 +41,12 @@
 
                         @if(!config('settings.is_whatsapp_ordering_mode'))
                         <!-- COD -->
-                        {{-- @if (!config('settings.hide_cod'))
+                        @if (!config('settings.hide_cod'))
                             <div class="custom-control custom-radio mb-3">
                                 <input name="paymentType" class="custom-control-input cashOnDelivery" id="cashOnDelivery" type="radio" value="cod" {{ config('settings.default_payment')=="cod"?"checked":""}}>
                                 <label class="custom-control-label" for="cashOnDelivery"><span class="delTime">{{ config('app.isqrsaas')?__('Cash / Card Terminal'): __('Cash on delivery') }}</span> <span class="picTime">{{ __('Cash on pickup') }}</span></label>
                             </div>
-                        @endif --}}
+                        @endif
 
                         {{-- @if($enablePayments)
 
