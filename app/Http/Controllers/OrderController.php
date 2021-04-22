@@ -598,10 +598,12 @@ class OrderController extends Controller
             return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
         }
 
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $nombre = $orderRepo->order->id . '-' . $file->getClientOriginalName();
+            \Storage::disk('public')->put($nombre, \File::get($file));
+        }
 
-        $file = $request->file('file');
-        $nombre = $orderRepo->order->id . '-' . $file->getClientOriginalName();
-        \Storage::disk('public')->put($nombre, \File::get($file));
 
         $o = Order::find($orderRepo->order->id );
         $o->file = $nombre;
