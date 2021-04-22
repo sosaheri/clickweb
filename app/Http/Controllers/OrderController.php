@@ -602,12 +602,15 @@ class OrderController extends Controller
             $file = $request->file('file');
             $nombre = $orderRepo->order->id . '-' . $file->getClientOriginalName();
             \Storage::disk('public')->put($nombre, \File::get($file));
+
+            $o = Order::find($orderRepo->order->id);
+            $o->file = $nombre;
+            $o->update();
+
         }
 
 
-        $o = Order::find($orderRepo->order->id );
-        $o->file = $nombre;
-        $o->update();
+
 
         return $orderRepo->redirectOrInfo($mobileLikeRequest->payback);
     }
