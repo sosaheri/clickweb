@@ -13,7 +13,7 @@
 
         <section class="section" id="main-content">
             <div class="container mt--100">
-                {{-- <h2>{{ $section['title'] }}</h2>
+                <h2>{{ $section['title'] }}</h2>
 
                 @isset($section['super_title'])
                     <h2 class="super_title">{{ $section['super_title'] }}</h2>
@@ -78,7 +78,7 @@
                         @endforelse
                     @endisset
 
-                </div> --}}
+                </div>
 
 
 
