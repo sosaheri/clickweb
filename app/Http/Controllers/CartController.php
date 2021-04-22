@@ -178,7 +178,7 @@ class CartController extends Controller
         }else{
             //Cart is empty
             if(config('app.isft')) {
-                return redirect()->route('front')->withError('Your Actualizar Carrito!');
+                return redirect()->route('front')->withError('Actualizar Carrito!');
             }else{
                 $previousOrders = Cookie::get('orders') ? Cookie::get('orders') : '';
                 $previousOrderArray = array_filter(explode(',', $previousOrders));

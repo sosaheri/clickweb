@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <span v-if="totalPrice==0">{{ __('Cart is empty') }}!</span>
+                            <span v-if="totalPrice==0">{{ __('Actualizar el carrito') }}!</span>
 
                             <span v-if="totalPrice"><strong>{{ __('Subtotal') }}:</strong></span>
                             <span v-if="totalPrice" class="ammount"><strong>@{{ totalPriceFormat }}</strong></span>
